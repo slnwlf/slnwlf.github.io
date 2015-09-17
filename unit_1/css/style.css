@@ -1,17 +1,18 @@
-body {
+/*body {
 	background-color: black;
-}
-h1,p {
+}*/
+/*h1,p {
 	color: yellow;
-	text-align: center;
+	text-align: center;*/
 }
 
 p {
 	font-family: "Times New Roman";
 	font-size: 20px;
+	color: rgb(0,0,255);
+	background-color: rgb(0,0,0)
 }
 
 .important {
 	font-size: 38px;
-}
 }
