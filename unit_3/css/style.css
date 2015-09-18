@@ -5,17 +5,14 @@ h1,p {
 	color: green;
 	text-align: center;
 }
-
 p {
 	font-family: arial, helvetica, sans-serif;
 	font-size: 20px;
 	color: green;
 }
-
+ul {
+	text-align: left;
+}
 #slogan {
 	font-style: italic;
-}
-
-.important {
-	font-size: 38px;
 }
