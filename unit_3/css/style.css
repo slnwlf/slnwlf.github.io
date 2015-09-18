@@ -1,7 +1,7 @@
 body {
 	background-color: black;
 }
-h1,p,ul {
+h1,p {
 	color: green;
 	text-align: center;
 }
@@ -9,6 +9,7 @@ h1,p,ul {
 p {
 	font-family: arial, helvetica, sans-serif;
 	font-size: 20px;
+	color: green;
 }
 
 #slogan {
