@@ -8,13 +8,8 @@ div {
   position: relative;
   margin: 40px 0 0 0;
   border-radius: 12px;
-}
-.profile {
-  height: 0;
-  border-top: 300px solid #ac6;
+  background-color: #bc6;
   border-radius: 10px 10px 10px 10px;
-  position: absolute;
-  right: 20px;
 }
 h1,p {
 	color: blue;
