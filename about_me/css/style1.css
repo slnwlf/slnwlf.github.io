@@ -1,0 +1,21 @@
+body {
+	background: url("http://i.imgur.com/3VWZow9.jpg");
+	background-size: cover;
+}
+div {
+  height: 200px;
+  width: 640px;
+  position: right;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+  background-color: #bc6;
+  border-radius: 10px 10px 10px 10px;
+}
+h1,p {
+	color: blue;
+	text-align: left;
+}
+p {
+	font-family: "Times New Roman";
+	font-size: 20px;
+}

@@ -1,21 +1,39 @@
-body {
-	background: url("http://i.imgur.com/3VWZow9.jpg");
-	background-size: cover;
+header {
+  text-align: center;
+  background: url('http://i.jootix.com/o/unnamed--9313267bce.jpg');
+  background-size: cover;
+  color: white;
 }
-div {
-  height: 200px;
-  width: 640px;
-  position: right;
-  margin: 40px 0 0 0;
-  border-radius: 12px;
-  background-color: #bc6;
-  border-radius: 10px 10px 10px 10px;
+a {
+  color: white;
 }
-h1,p {
-	color: blue;
-	text-align: left;
+h1 {
+  font-size: 70px;
 }
-p {
-	font-family: "Times New Roman";
-	font-size: 20px;
+img {
+  margin: 40px 0px 0px 0px;
+  border: 7px solid white;
+  border-radius: 100px;
 }
+ul {
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+}
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+article {
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 36px;
+  padding: 5px;
+}
+li {
+  padding: 5px;
+  display: block;
+}
+
