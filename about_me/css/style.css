@@ -5,16 +5,14 @@ body {
 .profile {
   height: 0;
   width: 140px;
-  border-top: 300px solid #cc6;
-  border-left: 75px solid transparent;
-  border-right: 75px solid transparent;
+  border-top: 300px solid #dc6;
   border-radius: 10px 10px 10px 10px;
   position: relative;
   right: 20px;
 }
 h1,p {
 	color: blue;
-	text-align: right;
+	text-align: left;
 }
 p {
 	font-family: "Times New Roman";
