@@ -2,6 +2,14 @@ body {
 	background: url("http://i.imgur.com/3VWZow9.jpg");
 	background-size: cover;
 }
+.profile {
+  height: 0;
+  width: 140px;
+  border-top: 300px solid #bc6;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-radius: 20px 20px 100px 100px;
+}
 h1,p {
 	color: blue;
 	text-align: right;
