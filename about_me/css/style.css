@@ -28,6 +28,16 @@ article {
   padding: 20px;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  h1 {
+      font-size: 36px;
+      padding: 5px;
+}
+  li {
+      padding: 5px;
+      display: block;
+    }
+}
 h1 {
   font-size: 36px;
   padding: 5px;
