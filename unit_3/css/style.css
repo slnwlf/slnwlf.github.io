@@ -1,6 +1,7 @@
 header {
   text-align: center;
   color: white;
+  font-weight: bold;
 }
 body {
 	background-color: #CCCCFF;
@@ -16,6 +17,7 @@ p {
 ul {
 	text-align: left;
 	font-size: 20px;
+	text-transform: uppercase;
 }
 #slogan {
 	font-style: italic;
