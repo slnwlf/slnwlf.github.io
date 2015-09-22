@@ -12,6 +12,12 @@ p {
 ul {
 	text-align: left;
 }
+img {
+	position: absolute;
+}
 #slogan {
 	font-style: italic;
+}
+#section {
+	text-align: left;
 }
