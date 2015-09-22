@@ -1,6 +1,6 @@
 body {
 	background-color: #CCCCFF;
-	color: white;
+	color: black;
 }
 h1,p {
 	text-align: center;
@@ -13,5 +13,5 @@ ul {
 	text-align: left;
 }
 #slogan {
-	font-style: italic;
+	font-style: bold;
 }
