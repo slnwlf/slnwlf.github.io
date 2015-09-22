@@ -12,7 +12,8 @@ p {
 ul {
 	text-align: left;
 }
-.slogan {
+#slogan {
+	background-color: yellow;
 	font-style: italic;
 	color: white;
 }
