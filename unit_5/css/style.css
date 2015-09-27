@@ -1,0 +1,43 @@
+h1 {
+	color: white;
+}
+body {
+	background-color: #000000;
+	font-family: Arial, serif;
+	color: black; 
+}
+header {
+	margin: auto; 
+	text-align: center;
+}
+h2 {
+	width: auto;
+	color: #11111;
+	padding: 10px;
+	margin: 20px;
+	font-style: italic;
+}
+ul {
+	display: inline;
+}
+li {
+	display: inline;
+}
+span {
+	width: auto;
+	color: green;
+	padding: 10px;
+	margin: 10px;
+	font-style: bold;
+}
+footer {
+	margin: auto 0;
+	color: white;
+	text-align: center;
+}
+#wrapper {
+	background-color: white;
+	width: 960px;
+	margin: 0 auto;
+	border: 2px dashed black;
+}
