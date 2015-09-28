@@ -2,9 +2,9 @@ h1 {
 	color: white;
 }
 body {
-	background-color: #000000;
+	background-color: #0099FF;
 	font-family: Arial, serif;
-	color: black; 
+	color: white; 
 }
 header {
 	margin: auto; 
@@ -16,6 +16,7 @@ h2 {
 	padding: 10px;
 	margin: 20px;
 	font-style: italic;
+	text-align: center;
 }
 ul {
 	display: inline;
@@ -25,10 +26,11 @@ li {
 }
 span {
 	width: auto;
-	color: green;
+	color: silver;
 	padding: 10px;
 	margin: 10px;
 	font-style: bold;
+	font-size: 30; 
 }
 footer {
 	margin: auto 0;
@@ -36,8 +38,8 @@ footer {
 	text-align: center;
 }
 #wrapper {
-	background-color: white;
-	width: 960px;
+	background-color: green;
+	width: 660px;
 	margin: 0 auto;
-	border: 2px dashed black;
+	border: 40px solid black;
 }
