@@ -34,7 +34,7 @@ span {
 }
 footer {
 	margin: auto 0;
-	color: white;
+	color: black;
 	text-align: center;
 }
 #wrapper {
@@ -43,4 +43,12 @@ footer {
 	margin: 0 auto;
 	border: 40px solid black;
 	padding: 10px;
+}
+#container {
+	color: black;
+	position: left;
+	width: 400px;
+	text-align: center;
+	padding: 10px;
+	border: 30px solid purple;
 }
