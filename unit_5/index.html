@@ -1,35 +1,41 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<title>Herbert's website</title>
 </head>
-<header>
-<h1>Beware sleeping cat:  Herbert Hancock</h1>
-<img src="images/herbert.jpg" title="Herbert the cat" alt="Herbert is a lazy cat">
-</header>
-<br />
-	<div id="wrapper"><p><span>Herbert Berbert</span> may not be the smartest cat, but he is the sleepiest cat.</p>
-	<p><span>Herbert</span> may not be the smartest cat, but he is the sleepiest cat.</p>
-	<h2>Also known as Fluffy</h2>
-	<p><span>Herbert</span> may not be the smartest cat cat, but he is the sleepiest cat.</p>
-	<p>Here is a cool Bootstrap button</p>
-	<br>
-	<a href="#" class="btn btn-primary">Button</a>
-	</div>
-	<br />
-	<div id="container">
-		<div id="headline">
-		<h2>He's so sleepy</h2>
-		</div>
-		<div id="subheadline">
-		<p>and fuzzy</p>
-		</div>
-		<div id="image">
+<body>
+	<header>
+		<h1>Beware sleeping cat:   Herbert Hancock</h1>
+		<img src="images/herbert.jpg" title="Herbert the cat" alt="Herbert is a lazy cat">
+	</header>
+	<div class="wrapper clearfix">
+		<section id="fluffy" class="column">
+			<p><span>Herbert Berbert</span> may not be the smartest cat, but he is the sleepiest cat.</p>
+			<p><span>Herbert</span> may not be the smartest cat, but he is the sleepiest cat.</p>
+			<h2>Also known as Fluffy</h2>
+			<p><span>Herbert</span> may not be the smartest cat cat, but he is the sleepiest cat.</p>
+			<p>Here is a cool Bootstrap button</p>
+			<a href="#" class="btn btn-primary">Button</a>
+		</section>
+		<section id="sleepy" class="column">
+			<h2>He's so sleepy</h2>
+			<p>and fuzzy</p>
 			<img src="images/herbert_kitten.jpeg" title="Herbert as a kitten" alt="Tiny kitten">
-		</div>
+		</section>
+		<section id="sleepy" class="column">
+			<div id="headline">
+				<h2>He's so sleepy</h2>
+			</div>
+			<div id="subheadline">
+				<p>and fuzzy</p>
+			</div>
+			<div id="image">
+				<img src="images/herbert_kitten.jpeg" title="Herbert as a kitten" alt="Tiny kitten">
+			</div>
+		</section>
 	</div>
 	<footer>
 		<ul>
@@ -38,8 +44,5 @@
 			<li><a href="#">Twitter</a></li>
 		</ul>
 	</footer>
-<body>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
