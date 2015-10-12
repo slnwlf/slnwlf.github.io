@@ -3,7 +3,8 @@ body {
 	background-color: #0099FF;
 	font-family: Arial, serif;
 	color: white; 
-	font-size:16px;
+	width: 100%; 
+	font-size:18px;
 }
 header {
 	margin: auto; 
@@ -13,6 +14,7 @@ footer {
 	margin: auto 0;
 	color: black;
 	text-align: center;
+	clear: both;
 }
 h1 {
 	color: white;
@@ -41,19 +43,32 @@ span {
 	font-style: bold;
 	font-size: 30; 
 }
-#wrapper {
+.wrapper {
 	background-color: green;
-	width: 660px;
+	width: 1000px;
 	margin: 0 auto;
 	border: 40px solid black;
 	padding: 10px;
 }
-#container {
-	color: black;
-	position: left;
-	width: 400px;
+section#catRow div {
+	background: #E92E43;
+	margin: 0 auto;
+	max-width: 75em;
 	text-align: center;
-	padding: 10px;
-	border: 30px solid purple;
-	margin: left;
+	padding: 0 1em;
 }
+.columns {
+	width: 100%;
+	float: left;
+	padding: 0 1em;
+	width: 33.33%;
+	border:.15em #fff solid;
+}
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
