@@ -16,6 +16,18 @@ footer {
 	text-align: center;
 	clear: both;
 }
+section#aboutme {
+	margin:auto;
+	width:1200px;
+}
+section#aboutme div {
+	float:left;
+	padding:1em;
+	width:33.33%;
+}
+section#aboutme div.col {
+	width:66.66%;
+}
 h1 {
 	color: white;
 	font-size:2em;
@@ -43,6 +55,10 @@ span {
 	font-style: bold;
 	font-size: 30; 
 }
+img {
+	display:block;
+	width:100%;
+}
 .wrapper {
 	background-color: green;
 	width: 1000px;
@@ -50,15 +66,7 @@ span {
 	border: 40px solid black;
 	padding: 10px;
 }
-section#catRow div {
-	background: #E92E43;
-	margin: 0 auto;
-	max-width: 75em;
-	text-align: center;
-	padding: 0 1em;
-}
 .columns {
-	width: 100%;
 	float: left;
 	padding: 0 1em;
 	width: 33.33%;
