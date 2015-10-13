@@ -9,7 +9,7 @@ body {
 header {
 	text-align: center;
 	background-size: cover; 
-  /*background: url('images/beach1.jpg'); */
+  /*background: url('images/beach1.jpg'); why doesn't this work? */
     background: url('http://triggerpit.com/wp-content/uploads/2012/01/Sequoia-close-up.jpg');
 	color: white;
 	padding: 100px 0 100px 0; 
@@ -49,11 +49,13 @@ li {
 	padding: 0 1em;
 	width: 33.33%;
 	border:.15em #aaa solid;
+	text-align: center;
 }
 .instagram {
 	width: 100%;
+	/*Why are these images stretching beyond 300px? */
 	float: left;
-	padding: 0 1em;
+	padding: 100px 1em;
 	width: 33.33%;
 	border:.15em #aaa solid;
 }
@@ -61,8 +63,9 @@ li {
 	width: 200%;
 	float: left;
 	padding: 0 1em;
-	width: 50%;
+	width: 30%;
 	border:.15em #fff solid;
+	/*How do I stretch the second column do be 66%?*/
 }
 .clearfix:after {
 	content: ".";
