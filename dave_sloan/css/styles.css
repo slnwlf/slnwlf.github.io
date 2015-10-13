@@ -63,9 +63,21 @@ li {
 	width: 200%;
 	float: left;
 	padding: 0 1em;
-	width: 30%;
+	width: 33%;
 	border:.15em #fff solid;
 	/*How do I stretch the second column do be 66%?*/
+}
+section#aboutme {
+	margin:auto;
+	width:1200px;
+}
+section#aboutme div {
+	float:left;
+	padding:1em;
+	width:33.33%;
+}
+section#aboutme div.col {
+	width:66.66%;
 }
 .clearfix:after {
 	content: ".";
