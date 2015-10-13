@@ -7,8 +7,12 @@ body {
 	font-size:18px;
 }
 header {
-	margin: auto; 
 	text-align: center;
+	background-size: cover; 
+  /*background: url('images/beach1.jpg'); */
+    background: url('http://triggerpit.com/wp-content/uploads/2012/01/Sequoia-close-up.jpg');
+	color: white;
+	padding: 100px 0 100px 0; 
 }
 footer {
 	margin: auto 0;
