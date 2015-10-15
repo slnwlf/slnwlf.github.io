@@ -2,6 +2,10 @@ nav {
 	background-color: #aaaaaa;
 	font-family: Arial, sans-serif;
 }
+nav#horizontal {
+ 	background-color: #aaaaaa;
+	font-family: Arial, sans-serif;
+}
 a {
 	background-color: blue;
 	color: white;
@@ -10,6 +14,64 @@ a {
 	padding: 20px;
 	width: 200px;
 }
+a.horiz {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  display: block;
+  float: left;
+  padding: 20px;
+}
 a:hover {
 	background-color: #aaaaaa;
+}
+p {
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20; 
+}
+.article {
+	padding: 10px;
+	width: 250px;
+    margin: 0 10px;
+	float: left;
+}
+div#article1 {
+	background-color: red;
+}
+div#article2 {
+	background-color: orange;
+}
+div#article3 {
+	background-color: yellow;
+}
+#container {
+	margin: 0 auto;
+	width: 1000px; 
+}
+div#magazine {
+  width: 500px;
+  margin: 10px auto;
+  border: 2px solid black;
+  padding: 20px;
+  clear: both;
+}
+
+div#magazine img {
+  float: right;
+  margin: 0 10px 10px 0;
+}
+
+div#magazine p {
+  margin: 0;
+  padding: 10px;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: ".";
+	clear: both;
+	height: 0;
 }
