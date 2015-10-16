@@ -33,8 +33,17 @@ h2 {
 	font-size:1.5em;
 	text-align: center;
 }
+h3 {
+	padding: .5em;
+}
 li {
 	display: inline;
+	padding: 20px;
+}
+span {
+	text-decoration: italic, bold; 
+	color: orange;
+	font-size: 1em;
 }
 .aboutme {
 	background: gray;
@@ -46,10 +55,11 @@ li {
 .columns {
 	width: 100%;
 	float: left;
-	padding: 0 1em;
-	width: 33.33%;
+	padding: 10px 1em;
+	width: 31%;
 	border:.15em #aaa solid;
 	text-align: center;
+	margin: 1%;
 }
 .instagram {
 	width: 100%;
@@ -58,22 +68,23 @@ li {
 	width: 33.33%;
 	border:.15em #aaa solid;
 }
-.col {
-	width: 200%;
+.col1 {
+	width: 50%;
 	float: left;
 	padding: 0 1em;
-	width: 33%;
 	border:.15em #fff solid;
-	/*How do I stretch the second column do be 66%?*/
+}
+.col2 {
+	width: 50%;
+	float: right;
+	padding: 0 1em;
+	border:.15em #fff solid;
 }
 section#aboutme {
-	margin:auto;
-	width:1200px;
-}
-section#aboutme div {
-	float:left;
-	padding:1em;
-	width:33.33%;
+	margin: 0 auto;
+	width: 1200px;
+	float: left;
+	padding: 10px; 
 }
 section#aboutme div.col {
 	width:66.66%;
