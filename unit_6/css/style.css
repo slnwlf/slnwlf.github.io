@@ -27,14 +27,13 @@ a:hover {
 }
 p {
 	padding: 10px;
-	text-align: center;
-	font-weight: bold;
+	text-align: left;
 	font-size: 20; 
 }
 .article {
 	padding: 10px;
 	width: 250px;
-    margin: 0 10px;
+    margin: 20px 10px;
 	float: left;
 }
 div#article1 {
@@ -49,10 +48,11 @@ div#article3 {
 #container {
 	margin: 0 auto;
 	width: 1000px; 
+	padding: 10px;
 }
 div#magazine {
   width: 500px;
-  margin: 10px auto;
+  margin: 20px auto;
   border: 2px solid black;
   padding: 20px;
   clear: both;
@@ -66,6 +66,7 @@ div#magazine img {
 div#magazine p {
   margin: 0;
   padding: 10px;
+  text-align: left;
 }
 .clearfix:after {
 	visibility: hidden;
@@ -74,4 +75,7 @@ div#magazine p {
 	content: ".";
 	clear: both;
 	height: 0;
+}
+#footy {
+	text-align: center;
 }
