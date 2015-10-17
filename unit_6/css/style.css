@@ -1,3 +1,4 @@
+* { margin:0; padding:0; box-sizing:border-box; }
 nav {
 	background-color: #aaaaaa;
 	font-family: Arial, sans-serif;
@@ -45,7 +46,7 @@ div#article2 {
 div#article3 {
 	background-color: yellow;
 }
-#container {
+.container {
 	margin: 0 auto;
 	width: 1000px; 
 	padding: 10px;

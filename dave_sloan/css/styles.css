@@ -48,52 +48,35 @@ span {
 	color: orange;
 	font-size: 1em;
 }
-.aboutme {
-	width: 100%;
-	float: left;
-	padding: 100px 1em;
-	width: 33.33%;
-	border:.15em #aaa solid;
-	clear: both; 
-}
-.columns {
-	width: 100%;
-	float: left;
-	padding: 10px 1em;
-	width: 30%;
-	border:.15em #aaa solid;
-	text-align: center;
-	margin: 1%;
-}
-.instagram {
-	width: 100%;
-	float: left;
-	padding: 100px 1em;
-	width: 33.33%;
-	border:.15em #aaa solid;
-	clear: both; 
-}
-.col1 {
-	width: 200px;
-	padding: 0 1em;
-	border:.15em #fff solid;
-	border-color: black; 
-}
-.col2 {
-	width: 800px;
-	padding: 20px 1em;
-	border:.15em #fff solid;
-	border-color: black; 
-}
-section#aboutme {
-	margin: 0 auto;
+section#wrapper {
 	width: 1000px;
-	float: left;
-	padding: 10px; 
-	clear: both;
+	border:.15em black solid;
 }
-section#aboutme div.col1 {
-	width:48%;
+div.aboutme {
+	width: 30%;
+	padding: .5em;
+	margin: .5em;
+	float: left;
+	clear: both; 
+}
+section#wrapper2 {
+	padding: .5em;
+	width: 1000px; 
+	border:.15em #aaa solid;
+	clear: both; 
+}
+div.columns {
+   width: 30%; 
+   padding: .5em;
+   margin: .5em;
+   float: left;
+   clear: both;
+}
+div#col1 {
+	background-color: red;	
+}
+div#col2 {
+	background-color: orange;
 }
 .clearfix:after {
 	content: ".";
