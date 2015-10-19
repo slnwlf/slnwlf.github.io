@@ -48,35 +48,35 @@ span {
 	color: orange;
 	font-size: 1em;
 }
-section#wrapper {
-	width: 1000px;
+#wrapper {
+	width: 1200px;
 	border:.15em black solid;
 }
-div.aboutme {
-	width: 30%;
+.aboutme {
 	padding: .5em;
 	margin: .5em;
 	float: left;
-	clear: both; 
+	width: 50%; 
 }
-section#wrapper2 {
+#wrapper2 {
 	padding: .5em;
-	width: 1000px; 
+	width: 1200px; 
 	border:.15em #aaa solid;
 	clear: both; 
 }
-div.columns {
+.columns {
    width: 30%; 
    padding: .5em;
    margin: .5em;
    float: left;
-   clear: both;
 }
-div#col1 {
+#col1 {
 	background-color: red;	
+	width: 33%;
 }
-div#col2 {
+#col2 {
 	background-color: orange;
+	width: 66%''
 }
 .clearfix:after {
 	content: ".";
