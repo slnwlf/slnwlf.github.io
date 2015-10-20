@@ -50,3 +50,11 @@ span {
    float: left;
    text-align: center; 
 }
+footer {
+	margin: auto 0;
+	color: black;
+	text-align: center;
+	clear: both;
+	margin-top: 20px; 
+	/*can have a margin bottom on body instead? */
+}
