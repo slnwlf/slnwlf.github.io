@@ -1,0 +1,64 @@
+body {
+    background-color: white;
+    color: black; 
+    font-size: 40px; 
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.button {
+    padding: 8px 16px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 3px; 
+    background-color: #ccc; 
+}
+.button-primary:hover {
+    background-color: gray; 
+}
+.button-primary:active {
+    background-color: black; 
+}
+.button-tiny {
+    font-size: 12px; 
+    padding: 6px 12px; 
+    background-color: slategray; 
+    color: #fff;
+}
+.button-primary {
+    font-size: 18px; 
+    padding: 6px 14px; 
+    background-color: slategray; 
+    color: #fff;
+}
+.button-medium {
+    font-size: 24px;
+    padding: 8px 16px;
+    background-color: slategray; 
+    color: #fff;
+}
+.button-large {
+    font-size: 48px;
+    padding: 8px 18px;
+    background-color: slategray; 
+    color: #fff;
+}
+/*a.ghost {
+    color:#f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 0;
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+a.ghost:hover, a.ghost:focus {
+    background-color:#f5f5f5;
+    color: #000;
+    -webkit-transition: color 0.3s ease-in, background-color 0.3s ease-in;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in;
+*/
