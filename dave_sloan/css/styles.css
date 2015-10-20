@@ -4,7 +4,7 @@ body {
 	font-family: Lora, serif;
 	color: black; 
 	width: 100%; 
-	font-size:18px;
+	font-size:20px;
 	margin-bottom: 150px; 
 	/*why doesn't this bottom margin work?*/
 }
@@ -20,7 +20,7 @@ header {
 	margin: 0 auto;
     border: 7px solid black;
     border-radius: 200px;
-    /*how do I center this photo in its column?*/
+    /*how do I center this photo in its column? with padding? */
 }
 footer {
 	margin: auto 0;
@@ -32,7 +32,7 @@ footer {
 }
 h1 {
 	color: white;
-	font-size:2em;
+	font-size:3em;
 }
 h2 {
 	width: auto;
@@ -54,13 +54,13 @@ i {
 	color: black;
 }
 span {
-	text-decoration: italic, bold; 
+	text-decoration: bold; 
 	color: orange;
-	font-size: 1em;
+	font-size: 1.5em;
 }
 #wrapper {
 	max-width: 1200px;
-	border:.15em black solid;
+	/*border:.15em black solid;*/
 	margin: 0 auto; 
 }
 .aboutme {
@@ -71,7 +71,7 @@ span {
 #wrapper2 {
 	padding: .5em;
 	width: 1200px; 
-	border:.15em #aaa solid;
+	/*border:.15em #aaa solid;*/
 	clear: both; 
 	margin: 0 auto; 
 }
@@ -83,11 +83,11 @@ span {
    text-align: center; 
 }
 #col1 {
-	background-color: red;	
+	/*background-color: red;	*/
 	width: 400px;
 }
 #col2 {
-	background-color: orange;
+	/*background-color: orange;*/
 	max-width: 750px;
 	padding: 100px 10px;
 }
