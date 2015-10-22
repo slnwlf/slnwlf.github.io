@@ -37,7 +37,7 @@ footer {
 }
 #logo {
 	display: inline-block;
-	margin: 1% 1%; 
+	margin: 3% 5% 3% 8%; 
 	float: left;
 	padding: 10px 20px; 
 }
@@ -104,10 +104,14 @@ footer {
 		display: block;
 		padding: .25em;
 	}
+	h1 {
+		font-size: 1em;
+	}
 	.horiz {
 		padding: .5em;
 	}
 	#logo {
 		float: none; 
+		width: 95% auto; 
 	}
 }
