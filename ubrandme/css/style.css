@@ -1,3 +1,4 @@
+/* CSS for Daniel's uBrandMe site*/
 * { margin:0; padding:0; box-sizing:border-box; }
 p {
 	font-size: 20px; 
@@ -12,7 +13,7 @@ i {
 }
 li {
 	display: inline;
-	padding: 20px;
+	padding: 1em;
 }
 .horiz {
   background-color: orange;
@@ -20,9 +21,9 @@ li {
   text-decoration: none;
   display: block;
   float: left;
-  padding: 20px 20px 20px 80px;
+  padding: 1em 1em 1em 4em;
   text-align: center;
-  margin: 10px auto; 
+  margin: .5em auto; 
   font-size: 2em; 
 }
 .tagline {
@@ -36,7 +37,7 @@ li {
 #headline {
 	text-align: center;
 	text-decoration: bold; 
-	padding: 50px 100px; 
+	padding: .5em 4em; 
 
 }
 .clearfix:after {
@@ -47,22 +48,22 @@ li {
 	clear: both;
 }
 #wrapper1 {
-	width: 1200px; 
+	width: 95%; 
 	border: .15em black solid; 
-	padding: 20px 100px 20px 100px; 
-	margin: 10px auto;
+	padding: 1em 2em 1em 2em; 
+	margin: .5em auto;
 }
 #wrapper2 {
-	width: 1200px; 
+	width: 95%; 
 	border: .15em black solid; 
-	padding: 10 100px; 	
-	margin: 10px auto;
+	padding: 10 5em; 	
+	margin: .5em auto;
 }
 #wrapper3 {
-	width: 1200px; 
+	width: 95%; 
 	border: .15em black solid; 
-	padding: 10px 20px; 
-	margin: 10px auto;
+	padding: .5em 1em; 
+	margin: .5em auto;
 }
 .columns {
    width: 30%; 
@@ -76,6 +77,32 @@ footer {
 	color: black;
 	text-align: center;
 	clear: both;
-	margin-top: 20px; 
+	margin-top: 1em; 
 	/*can have a margin bottom on body instead? */
+}
+@media only screen and (max-width: 800px) {
+	.horiz {
+		float: none;
+		padding: .1em;
+		margin: .1em 0 auto;
+		width: 100%;
+	}
+	.columns {
+		float: none; 
+	}
+}
+@media only screen and (max-width: 480px) {
+	li {
+		display: block;
+		padding: .25em;
+	}
+	.horiz {
+		padding: .5em;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#logo {
+		float: none; 
+	}
 }
