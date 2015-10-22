@@ -1,19 +1,24 @@
 /* CSS for Daniel's uBrandMe site*/
 * { margin:0; padding:0; box-sizing:border-box; }
-p {
+body {
 	font-size: 20px; 
 	font-family: Lora, sans-serif; 
-}
-span {
-	color: orange;
-	font-weight: 800; 
+	color: #333
 }
 i {
-	color: black;
+	color: #222;
 }
 li {
 	display: inline;
 	padding: 1em;
+}
+footer {
+	margin: auto 0;
+	color: #222;
+	text-align: center;
+	clear: both;
+	margin-top: 2%; 
+	/*can have a margin bottom on body instead? */
 }
 .horiz {
   background-color: orange;
@@ -23,22 +28,23 @@ li {
   float: left;
   padding: 1em 1em 1em 4em;
   text-align: center;
-  margin: .5em auto; 
-  font-size: 2em; 
+  margin: 1% auto; 
+  font-size: 1.5em; 
 }
 .tagline {
 	text-align: center;
+	margin: 1% auto;
 }
 #logo {
 	display: inline-block;
-	margin-left: 1em; 
+	margin: 1% 1%; 
 	float: left;
+	padding: 10px 20px; 
 }
 #headline {
 	text-align: center;
 	text-decoration: bold; 
 	padding: .5em 4em; 
-
 }
 .clearfix:after {
 	content: ".";
@@ -48,47 +54,49 @@ li {
 	clear: both;
 }
 #wrapper1 {
-	width: 95%; 
-	border: .15em black solid; 
+	max-width: 100%; 
+	background-color: orange; 
+	/*border: .15em black solid; */
 	padding: 1em 2em 1em 2em; 
-	margin: .5em auto;
+	margin: 1% auto;
 }
 #wrapper2 {
-	width: 95%; 
-	border: .15em black solid; 
+	max-width: 1200px; 
+	/*border: .15em black solid; */
 	padding: 10 5em; 	
-	margin: .5em auto;
+	margin: 1% auto;
 }
 #wrapper3 {
-	width: 95%; 
-	border: .15em black solid; 
+	max-width: 1200px; 
+	/*border: .15em black solid; */
 	padding: .5em 1em; 
-	margin: .5em auto;
+	margin: 1% auto;
 }
 .columns {
-   width: 30%; 
-   padding: .5em;
-   margin: .5em;
+   width: 31%; 
+   padding: 5px;
+   margin: 1%;
    float: left;
    text-align: center; 
 }
-footer {
-	margin: auto 0;
-	color: black;
-	text-align: center;
-	clear: both;
-	margin-top: 1em; 
-	/*can have a margin bottom on body instead? */
-}
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1080px) {
 	.horiz {
 		float: none;
 		padding: .1em;
-		margin: .1em 0 auto;
+		margin: 1% 0 auto;
 		width: 100%;
+	}
+	h1 {
+		font-size: 1.5em;
 	}
 	.columns {
 		float: none; 
+	}
+	#wrapper2 {
+		width: 95%; 
+	}
+	#wrapper3 {
+		width: 95%; 
 	}
 }
 @media only screen and (max-width: 480px) {
@@ -98,9 +106,6 @@ footer {
 	}
 	.horiz {
 		padding: .5em;
-	}
-	h1 {
-		font-size: 2em;
 	}
 	#logo {
 		float: none; 
