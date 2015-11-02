@@ -44,7 +44,8 @@ footer {
 #headline {
 	text-align: center;
 	text-decoration: bold; 
-	padding: .5em 4em; 
+	padding: 1em 4em; 
+	font-size: 1.5em; 
 }
 .clearfix:after {
 	content: ".";
