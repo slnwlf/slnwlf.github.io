@@ -58,7 +58,7 @@ $(document).ready(function() {
 		var b2 = y2 + h2;
 		var r2 = x2 + w2;
 
-		if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return "Go, go go!";
+		if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return "Go, go, go!";
 		return "The red car wins!";
 	}
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
 		var b2 = y2 + h2;
 		var r2 = x2 + w2;
 
-		if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return "Go, go go!";
+		if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return "Go, go, go!";
 		return "The yellow car wins!";
 	}
 
