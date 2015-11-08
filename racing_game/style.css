@@ -2,7 +2,7 @@
 
 body {
 	/*background-color: #999; */
-	font-family: Arial sans-serif; 
+	font-family: 'Press Start 2P', cursive; 
 	font-size: 18px; 
 }
 button {
@@ -32,7 +32,7 @@ button:active {
 }
 .resetbutton {
 	float: left; 
-	margin: 10px 10px 10px 500px; 
+	margin: 10px 10px 10px 400px; 
 }
 .container2 {
 	width: 800px;
@@ -42,12 +42,12 @@ button:active {
 }
 #winner {
 	background-color: #999;
-	margin: 10px auto; 
-	width: 150px;
-	height: 80px;
-	font-size: 1.5em; 
+	margin: 10px 10px 10px 100px; 
+	padding-top: 20px; 
+	width: 200px;
+	height: 100px;
+	font-size: 1em; 
 	color: white;
-	box-shadow: 2px 2px; 
 	display: block;
 	float: left; 
 }
@@ -90,5 +90,15 @@ button:active {
 #gametitle {
 	text-align: center; 
 	margin: 10px;
+}
+#redtext {
+	color: red;
+	font-weight: bold;
+	background-color: #999;
+}
+#yellowtext {
+	color: yellow;
+	font-weight: bold;
+	background-color: #999;
 }
 

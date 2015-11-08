@@ -6,7 +6,7 @@ Avoid the constraints of Bootstrap.  Build own CSS from scratch.  Layout is a ti
 
 Cars
 
-Cars are car images.  Ideally PNG images with transparent backgrounds.  Yellow and red. 
+Cars are car images. PNG images with transparent backgrounds.  Yellow and red.   Each one is its own div, inside a race track div. 
 
 Divs
 
@@ -18,15 +18,29 @@ Use JQuery to trigger movement based on keyboard events.  On click, the car will
 
 Finish line
 
-When the car gets to the finish line div, the game is over.   This might be a conditional Javascript function like if "car 1" or "car 2" touch another div then disable the click event functionality?  Maybe "collision detection."
+When the car gets to the finish line div, the game is over.   I set the finish line to an absolute position which looks pretty bad if the user resizes the screen. 
 
 Reset button
 
-Like the Tic Tac Toe game, a reset button will clear all previous moves and start a new game.  Not sure if this means clear the div or go back to all default behavior?
+Like the Tic Tac Toe game, a reset button will clear all previous moves and start a new game.  In this case it really just moves the cars back to a position to the left.  
 
-BONUS
+BONUS FEATURES TO ADD LATER
 
 Display timer
 
-Show the winning time.  Displayed timer stops when a car hits the finish line. 
+When either cars starts moving forward, a timer displays. Show the winning time.  Displayed timer stops when a car hits the finish line. 
+
+Animation
+
+Would like to get puffs of smoke showing once they are racing.  And maybe a parachute pops out the back of both cars when one wins. 
+
+BUGS TO FIX
+
+1) Show winner
+
+If the red cars wins, a 'red car wins' message is not displayed because the yellow car winning logic is below the red car logic in the JS file.  What I really want it to do is know if red car crosses first, display message that red car won, if yellow car crosses first, display message that yellow car won.  But for now it can only really understand one of those logic blocks, and the yellow car code is below the red car code. 
+
+2) Absolute finish line
+
+The finish line has an absolute position.  It looks bad if the screen is resized because the finish line does not appear relative to the race track. 
 
