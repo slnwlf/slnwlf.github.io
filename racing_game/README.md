@@ -14,7 +14,7 @@ Cars are HTML divs with classes or IDs "car 1 and car 2" that sit on the left of
 
 Movement
 
-Use JQuery to trigger movement based on keyboard events.  On click, the car will move 20px to the right.  Need to assign click events to specific keys like "Q" and "Z". 
+Use JQuery to trigger movement based on keyboard events.  On click, the car will move 20px to the right.  Need to assign click events to specific keys like "Q" and "Z".   
 
 Finish line
 
@@ -23,4 +23,10 @@ When the car gets to the finish line div, the game is over.   This might be a co
 Reset button
 
 Like the Tic Tac Toe game, a reset button will clear all previous moves and start a new game.  Not sure if this means clear the div or go back to all default behavior?
+
+BONUS
+
+Display timer
+
+Show the winning time.  Displayed timer stops when a car hits the finish line. 
 
