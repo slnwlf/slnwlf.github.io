@@ -59,9 +59,9 @@ $(document).ready(function() {
 		var r2 = x2 + w2;
 
 		if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return "Go, go, go!";
+		$(document).off("keydown");
 		return "The red car wins!";
 	}
-
 	window.setInterval(function() {
 		$('#winner').text(Collision($($redcar), $($finishline)));
 	}, 200);
@@ -83,17 +83,17 @@ $(document).ready(function() {
 		var r2 = x2 + w2;
 
 		if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return "Go, go, go!";
+		$(document).off("keydown");
 		return "The yellow car wins!";
 	}
-
 	window.setInterval(function() {
 		$('#winner').text(Collisionyellow($($yellowcar), $($finishline)));
 	}, 200);
-
 
 	// Resest button moves the cars back to a fixed position, but it doesn't technically reset the game. 
 	$('.resetbutton').on('click', function() {
 		$('#box1').css("left", "340px");
 		$('#box2').css("left", "340px");
+
 	});
 });
