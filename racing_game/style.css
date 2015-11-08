@@ -11,6 +11,7 @@ button {
 	width: 150px;
 	height: 80px;
 	font-size: 1.5em; 
+	color: white;
 	box-shadow: 3px 3px; 
 	display: block;
 	outline: none;
@@ -59,6 +60,12 @@ button:active {
     left: 1140px;
     top: 48px;
     position: absolute;
+}
+#instructions {
+	text-align: center;
+	margin: 30px 0 20px 0 auto; 
+	font-size: 1.5em; 
+	padding: 10px; 
 }
 #gametitle {
 	text-align: center; 
