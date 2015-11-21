@@ -8,21 +8,21 @@ header {
 #wrapper {
 	width: 80%;
 	border: solid 2px black; 
-	padding: 2em;
+	padding: 1em;
 	margin: 1em auto;
 
 }
 #textbox {
 	border: solid 1px black; 
 	width: 25%;
-	padding: 5em 1em;
+	padding: 1em 1em;
 	margin: .5em;
 	float: left;
 }
-#photogallery {
+.photogallery {
 	border: solid 1px black; 
 	width: 25%;
-	padding: 5em 1em;
+	padding: 1em 1em;
 	margin: .5em;
 	float: left;
 }

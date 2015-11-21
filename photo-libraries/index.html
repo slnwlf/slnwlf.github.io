@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Photo libraries demo</title>
+		<link href="main/lightbox.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="main/styles.css">
 	</head>
 	<body>
@@ -11,34 +12,43 @@
 		</header>
 		<div id="wrapper" class="clearfix">
 			<div id="textbox">
-			<p>Text box area 1</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, eveniet odio eius itaque distinctio, reiciendis pariatur earum officiis repudiandae commodi voluptates tenetur voluptate consectetur laudantium ipsa quaerat error non nulla?</p>
 			</div>
-			<div id="photogallery">
-			<p>Photo gallery area</p>
-			</div>
-		</div>
-			<div id="wrapper" class="clearfix">
-			<div id="textbox">
-			<p>Text box area 2</p>
-			</div>
-			<div id="photogallery">
-			<p>Photo gallery area</p>
-			</div>
-		</div>
-			<div id="wrapper" class="clearfix">
-			<div id="textbox">
-			<p>Text box area 3</p>
-			</div>
-			<div id="photogallery">
-			<p>Photo gallery area</p>
+			<div class="photogallery">
+			
+				<p>A quite evening at home</p>
+				<a href="images/meg-dave-artsy.jpg" data-lightbox="meg-dave-artsy" data-title="A quiet night at home"  alt="Meg and Dave"><img src="images/meg-dave-artsy-small.jpg"></a>
+
+				<p>Emma the kitten</p>
+				<a href="images/emma-zoom.jpg" data-lightbox="emma-zoom" data-title="Emma the kitten"  alt="Emma the kitten"><img src="images/emma-small.jpg"></a>
+
 			</div>
 		</div>
 
-	<footer></footer>
-	
-	<!-- jQuery CDN -->
-	<script type="text/javascript" href="scripts.js" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-	<!-- custom script -->
-	<script type="text/javascript" src="scripts.js"></script>
-</body>
-</html>
+
+
+<!-- 					<div id="wrapper" class="clearfix">
+						<div id="textbox">
+							<p>Text box area 2</p>
+						</div>
+						<div class="photogallery">
+							<p>Photo gallery area</p>
+						</div>
+					</div>
+					<div id="wrapper" class="clearfix">
+						<div id="textbox">
+							<p>Text box area 3</p>
+						</div>
+						<div class="photogallery">
+							<p>Photo gallery area</p>
+						</div>
+					</div> -->
+				<footer>Here is a footer</footer>
+				<!-- jQuery CDN -->
+				<script type="text/javascript" href="scripts.js" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+				<!-- 	Lightbox script -->
+				<script type="text/javascript" src="lightbox.js"></script>
+				<!-- custom script -->
+				<script type="text/javascript" src="scripts.js"></script>
+			</body>
+		</html>
