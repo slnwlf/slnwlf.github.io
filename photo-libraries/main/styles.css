@@ -1,3 +1,36 @@
 body {
 	background-color: lightblue; 
 }
+header {
+	margin: 10px auto;
+	text-align: center;
+}
+#wrapper {
+	width: 80%;
+	border: solid 2px black; 
+	padding: 2em;
+	margin: 1em auto;
+
+}
+#textbox {
+	border: solid 1px black; 
+	width: 25%;
+	padding: 5em 1em;
+	margin: .5em;
+	float: left;
+}
+#photogallery {
+	border: solid 1px black; 
+	width: 25%;
+	padding: 5em 1em;
+	margin: .5em;
+	float: left;
+}
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
