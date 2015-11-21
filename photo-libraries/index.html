@@ -12,40 +12,48 @@
 		</header>
 		<div id="wrapper" class="clearfix">
 			<div id="textbox">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, eveniet odio eius itaque distinctio, reiciendis pariatur earum officiis repudiandae commodi voluptates tenetur voluptate consectetur laudantium ipsa quaerat error non nulla?</p>
+				<p>The first jQuery library is a classic Lightbox library.  When a photo is selected, a zoomed photo open in a lightbox viewer.  The lightbox can dim the background space and open with a fade in treatment.  </p>
 			</div>
 			<div class="photogallery">
-			
+				<div class="photos">
 				<p>A quite evening at home</p>
 				<a href="images/meg-dave-artsy.jpg" data-lightbox="meg-dave-artsy" data-title="A quiet night at home"  alt="Meg and Dave"><img src="images/meg-dave-artsy-small.jpg"></a>
-
+				</div>
+				<div class="photos">
 				<p>Emma the kitten</p>
 				<a href="images/emma-zoom.jpg" data-lightbox="emma-zoom" data-title="Emma the kitten"  alt="Emma the kitten"><img src="images/emma-small.jpg"></a>
+				</div>
+			</div>
+		</div>
 
+		<div id="wrapper" class="clearfix">
+			<div id="textbox">
+				<p>The first jQuery library is a classic Lightbox library.  When a photo is selected, a zoomed photo open in a lightbox viewer.  The lightbox can dim the background space and open with a fade in treatment.  </p>
+			</div>
+			<div class="photogallery">
+				<div class="photos">
+				<p>A quite evening at home</p>
+
+				<img id="elevate-zoom" src="images/meg-dave-artsy-small.jpg" data-zoom-image="images/meg-dave-artsy.jpg"/>
+
+				</div>
+
+
+<!-- 				<div class="photos">
+				<p>Emma the kitten</p>
+				<a href="images/emma-zoom.jpg" data-lightbox="emma-zoom" data-title="Emma the kitten"  alt="Emma the kitten"><img src="images/emma-small.jpg"></a>
+				</div> -->
 			</div>
 		</div>
 
 
 
-<!-- 					<div id="wrapper" class="clearfix">
-						<div id="textbox">
-							<p>Text box area 2</p>
-						</div>
-						<div class="photogallery">
-							<p>Photo gallery area</p>
-						</div>
-					</div>
-					<div id="wrapper" class="clearfix">
-						<div id="textbox">
-							<p>Text box area 3</p>
-						</div>
-						<div class="photogallery">
-							<p>Photo gallery area</p>
-						</div>
-					</div> -->
+
 				<footer>Here is a footer</footer>
 				<!-- jQuery CDN -->
 				<script type="text/javascript" href="scripts.js" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+				<!-- elevateZoom script -->
+				<script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
 				<!-- 	Lightbox script -->
 				<script type="text/javascript" src="lightbox.js"></script>
 				<!-- custom script -->
