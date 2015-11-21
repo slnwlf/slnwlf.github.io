@@ -1,7 +1,8 @@
 $(function (){
 	console.log("Jquery is loading!");
 
-$("#elevate-zoom").ezPlus();
+$("#elevate-zoom-meg").ezPlus();
+$("#elevate-zoom-emma").ezPlus();
 
 });
 

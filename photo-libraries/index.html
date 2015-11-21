@@ -4,11 +4,12 @@
 		<meta charset="UTF-8">
 		<title>Photo libraries demo</title>
 		<link href="main/lightbox.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="main/styles.css">
 	</head>
 	<body>
 		<header>
-			<h1>Here is some placeholder text for my library page</h1>
+			<h1>A demonstration of jQuery photo zoom functionality</h1>
 		</header>
 		<div id="wrapper" class="clearfix">
 			<div id="textbox">
@@ -17,32 +18,31 @@
 			<div class="photogallery">
 				<div class="photos">
 				<p>A quite evening at home</p>
-				<a href="images/meg-dave-artsy.jpg" data-lightbox="meg-dave-artsy" data-title="A quiet night at home"  alt="Meg and Dave"><img src="images/meg-dave-artsy-small.jpg"></a>
+				<a href="images/meg-dave-artsy.jpg" data-lightbox="meg-dave-artsy" data-title="A quiet night at home"  alt="Meg and Dave"><img id="meg" src="images/meg-dave-artsy-small.jpg"></a>
 				</div>
 				<div class="photos">
 				<p>Emma the kitten</p>
-				<a href="images/emma-zoom.jpg" data-lightbox="emma-zoom" data-title="Emma the kitten"  alt="Emma the kitten"><img src="images/emma-small.jpg"></a>
+				<a href="images/emma-zoom.jpg" data-lightbox="emma-zoom" data-title="Emma the kitten"  alt="Emma the kitten"><img id="emma" src="images/emma-small.jpg"></a>
 				</div>
 			</div>
 		</div>
 
 		<div id="wrapper" class="clearfix">
 			<div id="textbox">
-				<p>The first jQuery library is a classic Lightbox library.  When a photo is selected, a zoomed photo open in a lightbox viewer.  The lightbox can dim the background space and open with a fade in treatment.  </p>
+				<p>The second jQuery library is a
+				'lens zoom' library.  When a user mouses over a photo, a second frame opens to show the zoomed image of that area.  This kind of inline zoom functionality is often seen on ecommerce sites.</p>
 			</div>
 			<div class="photogallery">
 				<div class="photos">
 				<p>A quite evening at home</p>
-
-				<img id="elevate-zoom" src="images/meg-dave-artsy-small.jpg" data-zoom-image="images/meg-dave-artsy.jpg"/>
-
+				<img id="elevate-zoom-meg" src="images/meg-dave-artsy-small.jpg" data-zoom-image="images/meg-dave-artsy.jpg"/>
 				</div>
 
 
-<!-- 				<div class="photos">
+				<div class="photos">
 				<p>Emma the kitten</p>
-				<a href="images/emma-zoom.jpg" data-lightbox="emma-zoom" data-title="Emma the kitten"  alt="Emma the kitten"><img src="images/emma-small.jpg"></a>
-				</div> -->
+				<img id="elevate-zoom-emma" src="images/emma-small.jpg" data-zoom-image="images/emma-zoom.jpg"/>
+				</div>
 			</div>
 		</div>
 

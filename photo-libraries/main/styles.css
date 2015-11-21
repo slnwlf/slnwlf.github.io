@@ -1,8 +1,10 @@
 body {
-	background-color: lightblue; 
+	background-color: #F8F8F8; 
+	font-family: 'Indie Flower', cursive;
+	font-size: 18px; 
 }
 header {
-	margin: 10px auto;
+	margin: .5em auto;
 	text-align: center;
 }
 footer {
@@ -11,27 +13,42 @@ footer {
 #wrapper {
 	width: 80%;
 	border: solid 2px black; 
-	padding: 1em;
-	margin: 1em auto;
+	padding: .5em;
+	margin: .5em auto;
+	background-color: #E8E8E8; 
 
 }
 #textbox {
-	border: solid 1px black; 
+/*	border: solid 1px black; */
 	width: 25%;
-	padding: 1em 1em;
+	padding: .5em 1em;
 	margin: .5em;
 	float: left;
+	background-color: #D8D8D8; 
 }
 .photogallery {
-	border: solid 1px black; 
-	width: 60%;
-	padding: 1em 1em;
-	margin: .5em;
+/*	border: solid 1px black; */
+	width: 62%;
+	padding: .3em 1em;
+	margin: .3em;
 	float: left;
+	background-color: #D8D8D8;
 }
 .photos {
 	float: left;
 	margin: .5em;
+}
+#elevate-zoom-emma {
+	border-radius: 4px; 
+}
+#elevate-zoom-meg {
+	border-radius: 4px; 
+}
+#emma {
+	border-radius: 4px; 
+}
+#meg {
+	border-radius: 4px; 
 }
 .clearfix:after {
 	content: ".";
