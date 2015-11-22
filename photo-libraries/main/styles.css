@@ -1,6 +1,6 @@
 body {
 	background-color: #F8F8F8; 
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Play', sans-serif;
 	font-size: 18px; 
 }
 header {
@@ -49,8 +49,28 @@ footer {
 }
 #emma {
 	border-radius: 4px; 
+	border: #D8D8D8 solid 2px;
 }
-#meg {
+#meg  {
+	border-radius: 4px; 
+	border: #D8D8D8 solid 2px;
+}
+#elevate-zoom-meg-inner {
+	border-radius: 4px; 
+}
+#elevate-zoom-emma-inner {
+	border-radius: 4px; 
+}
+#meg:hover {
+	border: #606060 solid 2px; 
+}
+#emma:hover {
+	border: #606060 solid 2px; 
+}
+#meg-lens {
+	border-radius: 4px; 
+}
+#emma-lens {
 	border-radius: 4px; 
 }
 .clearfix:after {
