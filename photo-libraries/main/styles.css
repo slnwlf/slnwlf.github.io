@@ -7,6 +7,9 @@ header {
 	margin: .5em auto;
 	text-align: center;
 }
+h3 {
+	text-align: center; 
+}
 footer {
 	text-align: center;
 }
