@@ -96,8 +96,12 @@ span {
   .facet_sidebar {
     display: none;
 	}	
+    .columns {
+    	float: none; 
+    }
     #pic {
-    	width: 200px; 
+    	width: 90%; 
+    	margin: 0 auto; 
   	}
   	header {
   		padding: 50px 0 50px 0; 
@@ -132,6 +136,9 @@ span {
   h1 {
   font-size: 1em; 
   }
+    #col1 {
+	width: 95%;
+	}
   	.columns {
    width: 95%; 
    padding: .1em;
