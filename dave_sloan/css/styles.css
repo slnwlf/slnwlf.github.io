@@ -6,21 +6,13 @@ body {
 	width: 100%; 
 	font-size:20px;
 	margin-bottom: 150px; 
-	/*why doesn't this bottom margin work?*/
 }
 header {
 	text-align: center;
 	background-size: cover; 
-    /*background: url('/images/beach1.jpg'); */
     background: url('http://triggerpit.com/wp-content/uploads/2012/01/Sequoia-close-up.jpg');
 	color: white;
 	padding: 100px 0 100px 0; 
-}
-#pic {
-	margin: 0 auto;
-    border: 7px solid black;
-    border-radius: 200px;
-    /*how do I center this photo in its column? with padding? */
 }
 footer {
 	margin: auto 0;
@@ -28,7 +20,6 @@ footer {
 	text-align: center;
 	clear: both;
 	margin-top: 20px; 
-	/*can have a margin bottom on body instead? */
 }
 h1 {
 	color: white;
@@ -38,7 +29,7 @@ h2 {
 	width: auto;
 	color: #111111;
 	padding:.5em;
-	margin: 1em;
+	margin: .5em 0 .5em 0;
 	font-style: none;
 	font-size:1.5em;
 	text-align: center;
@@ -65,32 +56,34 @@ span {
 }
 .aboutme {
 	padding: .5em;
-	margin: .5em;
+	margin: .5em 0 .5em 0;
 	float: left;
 }
 #wrapper2 {
 	padding: .5em;
 	width: 100%; 
-	/*border:.15em #aaa solid;*/
 	float: right; 
 	margin: 0 auto; 
 }
 .columns {
-   width: 100%; 
+   width: 30%; 
    padding: .5em;
    margin: .5em;
    float: left;
    text-align: center; 
 }
 #col1 {
-	/*background-color: red;	*/
 	width: 30%;
 }
 #col2 {
-	/*background-color: orange;*/
 	max-width: 60%;
 	padding: 100px 10px;
 	float: right; 
+}
+#pic {
+	margin: 0 auto;
+    border: 7px solid black;
+    border-radius: 200px;
 }
 .clearfix:after {
 	content: ".";
@@ -106,9 +99,53 @@ span {
     #pic {
     	width: 200px; 
   	}
+  	header {
+  		padding: 50px 0 50px 0; 
+  	}
+  	h1 {
+  		font-size: 2em; 
+  	}
+  	h2 {
+	width: auto;
+	color: #111111;
+	padding:.1em;
+	margin: .1em 0 .5em 0;
+	font-style: none;
+	font-size:1em;
+	text-align: center;
+	}
+  	#pic {
+		border-radius: 100px; 
+  	}
+	#col2 {
+		max-width: 95%;
+		padding: 10px 1px;
+	}
 }
 @media (max-width: 500px) {
   .facet_sidebar {
     display: none;
   }
+  header {
+  padding: 20px 0 20px 0; 
+  }
+  h1 {
+  font-size: 1em; 
+  }
+  	.columns {
+   width: 95%; 
+   padding: .1em;
+   margin: .1em;
+   text-align: center; 
+   }
+  	#pic {
+	border-radius: 100px; 
+	margin: 0 auto;
+   }
+   .aboutme {
+	padding: .2em;
+	margin: .2em 0 .2em 0;
+	text-align: center;
+}
+
 }
