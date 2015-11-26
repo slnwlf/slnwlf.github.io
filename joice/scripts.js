@@ -23,15 +23,16 @@ $(function() {
 		choices: ["Yep!"]
 	}];
 
-	var currentQuestion = 0;
-	var selections = [];
-	var survey = $('#question');
+	// var currentQuestion = 0;
+	// var selections = [];
+	// var survey = $('#question');
 
-	displayNext();
+	// displayNext();
 
-	// Click handler for the 'next' button
-	$('.next').on('click', function(e) {
-		e.preventDefault();
-	});
+// Click handler to start the quiz
+
+$("#startquiz").click(function() {
+	$("#div2").text("How are you doing today?");
+});
 
 });
