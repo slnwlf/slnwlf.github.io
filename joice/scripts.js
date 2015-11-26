@@ -27,6 +27,7 @@ $(function() {
 	var vegetarian = "Are you a vegetarian?";
 	var cheese = "Do you like cheese?";
 	var time = "How much time do you have to prepare the meal?";
+	var solution = "This recipe looks delicious.  What do you think?";
 
 	var $greatbtn = $('<button type="button" id="great" class="btn btn-default">Great</button>');
     var $goodbtn = $('<button type="button" id="good" class="btn btn-default">Good</button>');
@@ -39,6 +40,10 @@ $(function() {
 
     var $lessThirty = $('<button type="button" id="lessThanThirty" class="btn btn-default">Less than 30 min</button>');
     var $moreThirty = $('<button type="button" id="moreThanThirty" class="btn btn-default">More than 30 min</button>');
+	
+ 	var $zucchini = $('<img src="images/zucchini.jpg">');
+ 	var $likeButton = $('<button type="button" id="like" class="btn btn-default">Like</button>');
+ 	var $likedButton = $('<button type="button" id="like" class="btn btn-primary">Like</button>');
 	// var currentQuestion = 0;
 	// var selections = [];
 	// var survey = $('#question');
@@ -75,5 +80,14 @@ $("#yesToCheese").click(function() {
 	$("#div6").empty();
 	$("#div7").empty();
 });
-
+$("#moreThanThirty").click(function() {
+	$("#div11").text(solution);
+	$("#div10").html($zucchini);
+	$("#like").html($likeButton);
+	$("#div8").empty();
+	$("#div9").empty();
+});
+$("#like").click(function() {
+	$("#like").html($likedButton);
+});
 });
