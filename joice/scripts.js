@@ -25,12 +25,20 @@ $(function() {
 
 	var greeting = "How are you doing today?";
 	var vegetarian = "Are you a vegetarian?";
+	var cheese = "Do you like cheese?";
+	var time = "How much time do you have to prepare the meal?";
 
 	var $greatbtn = $('<button type="button" id="great" class="btn btn-default">Great</button>');
     var $goodbtn = $('<button type="button" id="good" class="btn btn-default">Good</button>');
 
     var $yesVege = $('<button type="button" id="yes" class="btn btn-default">Yes</button>');
     var $noVege = $('<button type="button" id="no" class="btn btn-default">No</button>');
+
+    var $yesCheese = $('<button type="button" id="yesToCheese" class="btn btn-default">Yes to cheese</button>');
+    var $noCheese = $('<button type="button" id="noToCheese" class="btn btn-default">No to cheese</button>');
+
+    var $lessThirty = $('<button type="button" id="lessThanThirty" class="btn btn-default">Less than 30 min</button>');
+    var $moreThirty = $('<button type="button" id="moreThanThirty" class="btn btn-default">More than 30 min</button>');
 	// var currentQuestion = 0;
 	// var selections = [];
 	// var survey = $('#question');
@@ -52,9 +60,20 @@ $("#great").click(function() {
 	$("#no").html($noVege);
 	$("#div3").empty();
 	$("#div2").empty();
-
-
 });
-
+$("#yes").click(function() {
+	$("#div6").text(cheese);
+	$("#yesToCheese").html($yesCheese);
+	$("#noToCheese").html($noCheese);
+	$("#div4").empty();
+	$("#div5").empty();
+});
+$("#yesToCheese").click(function() {
+	$("#div8").text(time);
+	$("#lessThanThirty").html($lessThirty);
+	$("#moreThanThirty").html($moreThirty);
+	$("#div6").empty();
+	$("#div7").empty();
+});
 
 });
