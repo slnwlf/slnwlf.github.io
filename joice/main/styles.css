@@ -5,9 +5,9 @@ body {
 }
 .section {
 	width: 30%;
-	margin: .5em auto;
-	padding: 1em;
-	border: black solid 2px;
+	margin: .2em auto;
+	padding: .3em 1em;
+/*	border: black solid 2px;*/
 	text-align: center; 
 	clear: all;
 }
@@ -17,10 +17,10 @@ body {
 .button-wrap {
 	float: left;
 	width: 50%;
-	border: black solid 1px;
-	padding: .5em;
+/*	border: black solid 1px;*/
+	padding: .3em;
 	text-align: center;
-	margin: .5em auto;
+	margin: .3em auto;
 }
 #header {
 	text-align: center; 

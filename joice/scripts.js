@@ -44,6 +44,8 @@ $(function() {
  	var $zucchini = $('<img src="images/zucchini.jpg">');
  	var $likeButton = $('<button type="button" id="like" class="btn btn-default">Like</button>');
  	var $likedButton = $('<button type="button" id="like" class="btn btn-primary">Like</button>');
+	
+	var $resetButton = $('<button type="button" id="like" class="btn btn-default">Reset</button>');
 	// var currentQuestion = 0;
 	// var selections = [];
 	// var survey = $('#question');
@@ -84,10 +86,13 @@ $("#moreThanThirty").click(function() {
 	$("#div11").text(solution);
 	$("#div10").html($zucchini);
 	$("#like").html($likeButton);
+	$("#reset").html($resetButton);
 	$("#div8").empty();
 	$("#div9").empty();
 });
 $("#like").click(function() {
 	$("#like").html($likedButton);
 });
+// $("reset").click(function() {
+
 });
