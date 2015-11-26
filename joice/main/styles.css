@@ -1,18 +1,34 @@
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
 	background-color: lightblue;
 	font-size: 18px; 
-
 }
 .section {
 	width: 30%;
-	margin: 20px auto;
+	margin: 10px auto;
 	padding: 1em;
 	border: black solid 2px;
 	text-align: center; 
+	clear: all;
 }
 .button-center {
 	margin: 0 auto; 
 }
+.button-wrap {
+	float: left;
+	width: 50%;
+	border: black solid 1px;
+	padding: 1em;
+	text-align: center;
+	margin: .5em auto;
+}
 #header {
 	text-align: center; 
+}
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
 }

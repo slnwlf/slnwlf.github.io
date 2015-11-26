@@ -23,6 +23,10 @@ $(function() {
 		choices: ["Yep!"]
 	}];
 
+	var greeting = "How are you doing today?";
+
+	var $greatbtn = $('<button type="button" id="great-action" class="btn btn-default">Great</button>');
+    var $goodbtn = $('<button type="button" id="great-action" class="btn btn-default">Good</button>');
 	// var currentQuestion = 0;
 	// var selections = [];
 	// var survey = $('#question');
@@ -32,7 +36,12 @@ $(function() {
 // Click handler to start the quiz
 
 $("#startquiz").click(function() {
-	$("#div2").text("How are you doing today?");
+	$("#div2").text(greeting);
+	$("#great").html($greatbtn);
+	$("#good").html($goodbtn);
+	$("#div1").empty();
+
 });
+
 
 });
