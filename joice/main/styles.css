@@ -1,3 +1,22 @@
 body {
-	background-color: lightblue; 
+background-color: lightblue;
+}
+.nextButton {
+	box-shadow: 3px 3px 5px #222;
+	border-radius: 4px;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	background-color: white;
+	/*clear: both;*/
+	color: black;
+	position: relative;
+	margin: 0 auto;
+	padding: 13px 10px;
+}
+.nextButton:hover {
+	box-shadow: 3px 3px 5px #999;
+}
+#header {
+	text-align: center; 
 }
