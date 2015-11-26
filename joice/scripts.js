@@ -24,9 +24,13 @@ $(function() {
 	}];
 
 	var greeting = "How are you doing today?";
+	var vegetarian = "Are you a vegetarian?";
 
-	var $greatbtn = $('<button type="button" id="great-action" class="btn btn-default">Great</button>');
-    var $goodbtn = $('<button type="button" id="great-action" class="btn btn-default">Good</button>');
+	var $greatbtn = $('<button type="button" id="great" class="btn btn-default">Great</button>');
+    var $goodbtn = $('<button type="button" id="good" class="btn btn-default">Good</button>');
+
+    var $yesVege = $('<button type="button" id="yes" class="btn btn-default">Yes</button>');
+    var $noVege = $('<button type="button" id="no" class="btn btn-default">No</button>');
 	// var currentQuestion = 0;
 	// var selections = [];
 	// var survey = $('#question');
@@ -40,6 +44,15 @@ $("#startquiz").click(function() {
 	$("#great").html($greatbtn);
 	$("#good").html($goodbtn);
 	$("#div1").empty();
+
+});
+$("#great").click(function() {
+	$("#div4").text(vegetarian);
+	$("#yes").html($yesVege);
+	$("#no").html($noVege);
+	$("#div3").empty();
+	$("#div2").empty();
+
 
 });
 
