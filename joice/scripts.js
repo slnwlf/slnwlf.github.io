@@ -68,6 +68,13 @@ $("#great").click(function() {
 	$("#div3").empty();
 	$("#div2").empty();
 });
+$("#good").click(function() {
+	$("#div4").text(vegetarian);
+	$("#yes").html($yesVege);
+	$("#no").html($noVege);
+	$("#div3").empty();
+	$("#div2").empty();
+});
 $("#yes").click(function() {
 	$("#div6").text(cheese);
 	$("#yesToCheese").html($yesCheese);
@@ -75,7 +82,21 @@ $("#yes").click(function() {
 	$("#div4").empty();
 	$("#div5").empty();
 });
+$("#no").click(function() {
+	$("#div6").text(cheese);
+	$("#yesToCheese").html($yesCheese);
+	$("#noToCheese").html($noCheese);
+	$("#div4").empty();
+	$("#div5").empty();
+});
 $("#yesToCheese").click(function() {
+	$("#div8").text(time);
+	$("#lessThanThirty").html($lessThirty);
+	$("#moreThanThirty").html($moreThirty);
+	$("#div6").empty();
+	$("#div7").empty();
+});
+$("#noToCheese").click(function() {
 	$("#div8").text(time);
 	$("#lessThanThirty").html($lessThirty);
 	$("#moreThanThirty").html($moreThirty);
@@ -90,9 +111,20 @@ $("#moreThanThirty").click(function() {
 	$("#div8").empty();
 	$("#div9").empty();
 });
+$("#lessThanThirty").click(function() {
+	$("#div11").text(solution);
+	$("#div10").html($zucchini);
+	$("#like").html($likeButton);
+	$("#reset").html($resetButton);
+	$("#div8").empty();
+	$("#div9").empty();
+});
 $("#like").click(function() {
 	$("#like").html($likedButton);
 });
-// $("reset").click(function() {
+// reset entire document
+$("#reset").click(function() {
+	$(document).unbind(); 
+});
 
 });
