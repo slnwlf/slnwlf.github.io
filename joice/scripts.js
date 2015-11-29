@@ -23,6 +23,8 @@ $(function() {
 		choices: ["Yep!"]
 	}];
 
+	var $divClone = $('#quiz-container').clone();
+
 	var greeting = "How are you doing today?";
 	var vegetarian = "Are you a vegetarian?";
 	var cheese = "Do you like cheese?";
@@ -124,7 +126,9 @@ $("#like").click(function() {
 });
 // reset entire document
 $("#reset").click(function() {
-	$(document).unbind(); 
+	console.log("the reset button was selected");
+	// $("#quiz-container").replaceWith($divClone.clone());
+	$("#quiz-container").replaceWith($divClone);
 });
 
 });
