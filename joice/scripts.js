@@ -129,6 +129,7 @@ $("#reset").click(function() {
 	console.log("the reset button was selected");
 	// $("#quiz-container").replaceWith($divClone.clone());
 	$("#quiz-container").replaceWith($divClone);
+	// Not sure why the rest button doesn't really work
 });
 
 });
