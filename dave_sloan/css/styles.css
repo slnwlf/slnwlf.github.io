@@ -66,9 +66,9 @@ span {
 	margin: 0 auto; 
 }
 .columns {
-   width: 30%; 
-   padding: .5em;
-   margin: .5em;
+   width: 33%; 
+/*   padding: .5em;
+   margin: .5em;*/
    float: left;
    text-align: center; 
 }
@@ -79,6 +79,9 @@ span {
 	max-width: 60%;
 	padding: 100px 10px;
 	float: right; 
+}
+#instagram {
+	width: 300px; 
 }
 #pic {
 	margin: 0 auto;
@@ -99,6 +102,9 @@ span {
     .columns {
     	float: none; 
     }
+    #instagram {
+	width: 100%; 
+	}
     #pic {
     	width: 90%; 
     	margin: 0 auto; 
@@ -119,10 +125,10 @@ span {
 	text-align: center;
 	}
   	#pic {
-		border-radius: 100px; 
+		border-radius: 50%; 
   	}
 	#col2 {
-		max-width: 95%;
+		max-width: 100%;
 		padding: 10px 1px;
 	}
 }
@@ -146,7 +152,7 @@ span {
    text-align: center; 
    }
   	#pic {
-	border-radius: 100px; 
+	border-radius: 50%; 
 	margin: 0 auto;
    }
    .aboutme {
