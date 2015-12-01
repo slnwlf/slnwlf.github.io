@@ -44,19 +44,19 @@ $(function() {
 	var $lessThirty = $('<div><button type="button" id="lessThanThirty" class="btn btn-primary">Less than 30 min</button></div>');
 	var $moreThirty = $('<div><button type="button" id="moreThanThirty" class="btn btn-primary">More than 30 min</button></div>');
 
-	var $beginbtn2 = $('<button type="button" id="begin" class="btn btn-primary">Ready!</button>');
-	
-	var $greatbtn2 = $('<button type="button" id="great" class="btn btn-primary">Great</button>');
-	var $goodbtn2 = $('<button type="button" id="good" class="btn btn-primary">Good</button>');
+	var $beginbtn2 = $('<button type="button" id="begin" class="btn btn-primary btn2">Ready!</button>');
 
-	var $yesVege2 = $('<div><button type="button" id="yes" class="btn btn-primary">Yes.  Vegetarian</button></div>');
-	var $noVege2 = $('<div><button type="button" id="no" class="btn btn-primary">No.  I eat meat</button></div>');
+	var $greatbtn2 = $('<button type="button" id="great" class="btn btn-primary btn2">Great</button>');
+	var $goodbtn2 = $('<button type="button" id="good" class="btn btn-primary btn2">Good</button>');
 
-	var $yesCheese2 = $('<div><button type="button" id="yesToCheese" class="btn btn-primary">Yes to cheese</button></div>');
-	var $noCheese2 = $('<div><button type="button" id="noToCheese" class="btn btn-primary">No to cheese</button></div>');
+	var $yesVege2 = $('<div><button type="button" id="yes" class="btn btn-primary btn2">Yes.  Vegetarian</button></div>');
+	var $noVege2 = $('<div><button type="button" id="no" class="btn btn-primary btn2">No.  I eat meat</button></div>');
 
-	var $lessThirty2 = $('<div><button type="button" id="lessThanThirty" class="btn btn-primary">Less than 30 min</button></div>');
-	var $moreThirty2 = $('<div><button type="button" id="moreThanThirty" class="btn btn-primary">More than 30 min</button></div>');
+	var $yesCheese2 = $('<div><button type="button" id="yesToCheese" class="btn btn-primary btn2">Yes to cheese</button></div>');
+	var $noCheese2 = $('<div><button type="button" id="noToCheese" class="btn btn-primary btn2">No to cheese</button></div>');
+
+	var $lessThirty2 = $('<div><button type="button" id="lessThanThirty" class="btn btn-primary btn2">Less than 30 min</button></div>');
+	var $moreThirty2 = $('<div><button type="button" id="moreThanThirty" class="btn btn-primary btn2">More than 30 min</button></div>');
 
 	var $zucchini = $('<img class="solution" src="images/zucchini.jpg">');
 	var $eggplant = $('<img class="solution" src="images/eggplant.jpg">');

@@ -1,6 +1,6 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
-	background-color: white;
+	background-color: #428bca;
 	font-size: 18px; 
 }
 .section {
@@ -69,6 +69,8 @@ body {
 }
 .panel-heading {
 	height: 50px;
+	color: white; 
+	padding: 5px; 
 }
 .panel-body {
 	height: 2px;
@@ -82,8 +84,17 @@ body {
 	text-align: center; 
 }
 .btn {
+	background-color: white;
+	border-color: black; 
+	color: black; 
+	font-weight: bold; 
+}
+.btn:hover {
 	background-color: #8fe246;
-	border-color: white; 
+}
+.btn2:hover {
+	background-color: white;
+	color: black; 
 }
 .clearfix:after {
 	content: ".";
