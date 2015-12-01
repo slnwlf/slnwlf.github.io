@@ -37,14 +37,14 @@ $(function() {
 	var $greatbtn = $('<button type="button" id="great" class="btn btn-primary">Great</button>');
 	var $goodbtn = $('<button type="button" id="good" class="btn btn-primary">Good</button>');
 
-	var $yesVege = $('<div class="text"><button type="button" id="yes" class="btn btn-primary">Yes.  Vegetarian</button></div>');
-	var $noVege = $('<div class="text"><button type="button" id="no" class="btn btn-primary">No.  I eat meat</button></div>');
+	var $yesVege = $('<div><button type="button" id="yes" class="btn btn-primary">Yes.  Vegetarian</button></div>');
+	var $noVege = $('<div><button type="button" id="no" class="btn btn-primary">No.  I eat meat</button></div>');
 
-	var $yesCheese = $('<div class="text"><button type="button" id="yesToCheese" class="btn btn-primary">Yes to cheese</button></div>');
-	var $noCheese = $('<div class="text"><button type="button" id="noToCheese" class="btn btn-primary">No to cheese</button></div>');
+	var $yesCheese = $('<div><button type="button" id="yesToCheese" class="btn btn-primary">Yes to cheese</button></div>');
+	var $noCheese = $('<div><button type="button" id="noToCheese" class="btn btn-primary">No to cheese</button></div>');
 
-	var $lessThirty = $('<div class="text"><button type="button" id="lessThanThirty" class="btn btn-primary">Less than 30 min</button></div>');
-	var $moreThirty = $('<div class="text"><button type="button" id="moreThanThirty" class="btn btn-primary">More than 30 min</button></div>');
+	var $lessThirty = $('<div><button type="button" id="lessThanThirty" class="btn btn-primary">Less than 30 min</button></div>');
+	var $moreThirty = $('<div><button type="button" id="moreThanThirty" class="btn btn-primary">More than 30 min</button></div>');
 
 	var $zucchini = $('<img class="solution" src="images/zucchini.jpg">');
 	var $eggplant = $('<img class="solution" src="images/eggplant.jpg">');
@@ -66,7 +66,6 @@ $(function() {
 		$("#div2").html($beginbtn);
 		$("#icon3").html($profile);
 		$("#text3").html($greeting);
-		console.log("greeting is working");
 		$("#left").html($greatbtn);
 		$("#right").html($goodbtn);
 
@@ -74,7 +73,6 @@ $(function() {
 	$greatbtn.click(function() {
 		$("#div4").html($greatbtn);
 		$("#icon5").html($profile);
-		console.log($profile);
 		$("#text5").html($vegetarian);
 		$("#left").empty();
 		$("#right").empty();
@@ -90,12 +88,14 @@ $(function() {
 		$("#right").empty();
 		$("#left").html($yesVege);
 		$("#right").html($noVege);
-		// $("#div3").empty();
-		// $("#div2").empty();
+
 	});
 	$yesVege.click(function() {
 		$("#icon7").html($profile);
 		$("#text7").html($cheese);
+		$("#div6").html($yesVege);
+		$("#left").empty();
+		$("#right").empty();
 		$("#left").html($yesCheese);
 		$("#right").html($noCheese);
 
@@ -105,6 +105,8 @@ $(function() {
 		$("#div6").html($noVege);
 		$("#icon7").html($profile);
 		$("#text7").html($cheese);
+		$("#left").empty();
+		$("#right").empty();
 		$("#left").html($yesCheese);
 		$("#right").html($noCheese);
 
@@ -114,6 +116,8 @@ $(function() {
 		$("#div8").html($yesCheese);
 		$("#icon9").html($profile);
 		$("#text9").html($cheese);
+		$("#left").empty();
+		$("#right").empty();
 		$("#left").html($lessThirty);
 		$("#right").html($moreThirty);
 
@@ -123,24 +127,31 @@ $(function() {
 		$("#div8").html($noCheese);
 		$("#icon9").html($profile);
 		$("#text9").html($cheese);
+		$("#left").empty();
+		$("#right").empty();
 		$("#left").html($lessThirty);
 		$("#right").html($moreThirty);
 
 	});
 	$moreThirty.click(function() {
 		$("#div11").html($solution);
-		$("div10").html($moreThirty);
+		$("#div10").html($moreThirty);
 		$("#icon11").html($profile);
+		$("#text11").html($cheese);
 		$("#div12").html($zucchini);
+		$("#left").empty();
+		$("#right").empty();
 		$("#left").html($likeButton);
 		$("#right").html($moreButton);
 
 	});
 	$lessThirty.click(function() {
 		$("#div11").html($solution);
-		$("div10").html($lessThirty);
+		$("#div10").html($lessThirty);
 		$("#icon11").html($profile);
 		$("#div12").html($zucchini);
+		$("#left").empty();
+		$("#right").empty();
 		$("#left").html($likeButton);
 		$("#right").html($moreButton);
 

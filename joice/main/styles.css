@@ -17,7 +17,7 @@ body {
 /*	height: 50px; */
 	margin: .2em auto;
 	padding: .3em 1em;
-/*	border: black solid 1px;*/
+	border: black solid 1px;
 	text-align: right; 
 	clear: all;
 }
@@ -67,7 +67,7 @@ body {
 /*	border: black solid 1px;*/
 	float: left; 
 }
-.solution {
+#div12 {
 	text-align: center; 
 }
 .clearfix:after {
