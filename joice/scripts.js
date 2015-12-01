@@ -25,13 +25,15 @@ $(function() {
 
 	var $divClone = $('#quiz-container').clone();
 
-	var $profile = $('<img id="joice" src="images/joice-chat.png">');
-	var $greeting = $('<p>How are you doing today??</p>');
+	var $profile = $('<div class="icon"><img id="joice" src="images/joice-chat.png"></div>');
+	var $greeting = $('<div class="text"><p>How are you doing today?</p></div>');
 	var $vegetarian = $('<p>Are you a vegetarian?</p>');
 	var $cheese = $('<p>Do you like cheese?</p>');
 	var $time = $('<p>How much time do you have to prepare the meal?</p>');
 	var $solution = $('<p>This recipe looks delicious.  What do you think?</p>');
 
+	var $beginbtn = $('<button type="button" id="begin" class="btn btn-primary">Ready!</button>');
+	
 	var $greatbtn = $('<button type="button" id="great" class="btn btn-primary">Great</button>');
 	var $goodbtn = $('<button type="button" id="good" class="btn btn-primary">Good</button>');
 
@@ -58,14 +60,18 @@ $(function() {
 	// Click handler to start the quiz
 
 	$("#begin").click(function() {
-		$("#div2").html($greeting);
+		$("#div2").html($beginbtn);
+		$("#icon3").html($profile);
+		$("#text3").html($greeting);
 		$("#left").html($greatbtn);
 		$("#right").html($goodbtn);
 
 	});
 	$greatbtn.click(function() {
 		console.log("great was clicked!");
-		$("#div3").html(vegetarian);
+		$("#div4").html($greatbtn);
+		$("#icon5").html($profile);
+		$("#text5").html($vegetarian);
 		$("#left").empty();
 		$("#right").empty();
 		$("#left").html($yesVege);
@@ -74,7 +80,8 @@ $(function() {
 	});
 	$goodbtn.click(function() {
 		console.log("good was clicked!");
-		$("#div4").html(vegetarian);
+		$("#div4").html($goodbtn);
+		$("#div5").html($vegetarian);
 		$("#left").html($yesVege);
 		$("#right").html($noVege);
 		$("#div3").empty();
