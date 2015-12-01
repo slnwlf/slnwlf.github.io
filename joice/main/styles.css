@@ -1,6 +1,6 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
-	background-color: #8fe246;
+	background-color: white;
 	font-size: 18px; 
 }
 .section {
@@ -8,7 +8,7 @@ body {
 /*	height: 50px; */
 	margin: .2em auto;
 	padding: .3em 1em;
-	border: black solid 2px;
+/*	border: black solid 2px;*/
 	text-align: left; 
 	clear: all;
 }
@@ -17,38 +17,33 @@ body {
 /*	height: 50px; */
 	margin: .2em auto;
 	padding: .3em 1em;
-	border: black solid 2px;
+/*	border: black solid 1px;*/
 	text-align: right; 
 	clear: all;
 }
 .button-center {
 	margin: 0 auto; 
 }
-.button-wrap {
-	float: left;
-	width: 50%;
-	border: black solid 1px;
-	padding: .3em;
-	text-align: center;
-	margin: .3em auto;
+#quiz-container {
+	background-color: #8fe246;
 }
 #reply {
-	border: black solid 2px;
+/*	border: black solid 2px;*/
 	height: 52px; 
 }
 #left {
 	float: left; 
-	width: 49%;
-	height: 50px;
-	margin: 0 2px 0 0;
+	width: 48%;
+	height: 45px;
+	margin: 3px;
 	text-align: right;
 /*	border: black solid 1px;*/
 }
 #right {
 	float: left; 
-	width: 49%;
-	height: 50px;
-	margin: 0 0 0 2px;
+	width: 48%;
+	height: 45px;
+	margin: 3px;
 	text-align: left;
 /*	border: black solid 1px;*/
 }
@@ -62,14 +57,18 @@ body {
 .icon {
 	width: 10%;
 	height: 50px; 
-	border: black solid 1px;
+/*	border: black solid 1px;*/
 	float: left; 
 }
 .text {
 	width: 90%;
 	height: 50px;
-	border: black solid 1px;
+	background-color: white; 
+/*	border: black solid 1px;*/
 	float: left; 
+}
+.solution {
+	text-align: center; 
 }
 .clearfix:after {
 	content: ".";
