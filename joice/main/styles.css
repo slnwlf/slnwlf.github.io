@@ -5,10 +5,10 @@ body {
 }
 .section {
 	width: 100%;
-/*	height: 50px; */
+/*	height: 100px; */
 	margin: .2em auto;
 	padding: .3em 1em;
-/*	border: black solid 2px;*/
+	border: black solid 2px;
 	text-align: left; 
 	clear: all;
 }
@@ -17,7 +17,7 @@ body {
 /*	height: 50px; */
 	margin: .2em auto;
 	padding: .3em 1em;
-/*	border: black solid 1px;*/
+	border: black solid 1px;
 	text-align: right; 
 	clear: all;
 }
@@ -56,16 +56,17 @@ body {
 }
 .icon {
 	width: 9%;
+	margin: 0 auto;
 	height: 50px; 
-/*	border: black solid 1px;*/
+	border: black solid 1px;
 	float: left; 
 }
 .text {
 	width: 89%;
 	height: 50px;
 	background-color: white; 
-/*	border: black solid 1px;*/
-	float: left; 
+	border: black solid 1px;
+	float: right; 
 }
 .panel-heading {
 	height: 50px;
@@ -91,6 +92,9 @@ body {
 }
 .btn:hover {
 	background-color: #8fe246;
+}
+.btn2 {
+	border-color: white; 
 }
 .btn2:hover {
 	background-color: white;

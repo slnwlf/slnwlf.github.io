@@ -1,29 +1,9 @@
 $(function() {
 	console.log("Jquery is loading!");
 
-	// Test surveyurvey test via prompts
+	// Buttons and text strings
 
-	var questions = [{
-		question: "How are you doing today?",
-		choices: ["good", "great"]
-	}, {
-		question: "I'll ask you a few questions in order to make a recipe recommendation.  Sound good?",
-		choices: ["yep"]
-	}, {
-		question: "Are you a vegetarian?",
-		choices: ["yes", "no"]
-	}, {
-		question: "Do you like cheese?",
-		choices: ["yes", "no"]
-	}, {
-		question: "How much time do you have to prepare the meal?",
-		choices: ["<30 minutes", ">30 minutes"]
-	}, {
-		question: "Thanks for all the information.  Are you ready for a recommendation?",
-		choices: ["Yep!"]
-	}];
-
-	var $profile = $('<div class="icon"><img id="joice" src="images/joice-chat.png"></div>');
+	var $profile = $('<div class="icon"><img src="images/joice-chat.png"></div>');
 	var $greeting = $('<div class="text"><p>Happy to help. How are you doing today?</p></div>');
 	var $vegetarian = $('<div class="text"><p>Are you a vegetarian?</p></div>');
 	var $cheese = $('<div class="text"><p>Do you like cheese?</p></div>');
@@ -73,7 +53,7 @@ $(function() {
 
 	$("#begin").click(function() {
 		$("#div2").html($beginbtn2);
-		$("#icon3").html($profile);
+		$("#profile3").html($profile);
 		$("#text3").html($greeting);
 		$("#left").html($greatbtn);
 		$("#right").html($goodbtn);
@@ -81,17 +61,17 @@ $(function() {
 	});
 	$greatbtn.click(function() {
 		$("#div4").html($greatbtn2);
-		$("#icon5").html($profile);
 		$("#text5").html($vegetarian);
 		$("#left").empty();
 		$("#right").empty();
+		$("#profile5").html($profile);
 		$("#left").html($yesVege);
 		$("#right").html($noVege);
 
 	});
 	$goodbtn.click(function() {
 		$("#div4").html($goodbtn2);
-		$("#icon5").html($profile);
+		$("#profile5").html($profile);
 		$("#text5").html($vegetarian);
 		$("#left").empty();
 		$("#right").empty();
@@ -100,8 +80,8 @@ $(function() {
 
 	});
 	$yesVege.click(function() {
-		$("#icon7").html($profile);
 		$("#text7").html($cheese);
+		$("#profile7").html($profile);
 		$("#div6").html($yesVege2);
 		$("#left").empty();
 		$("#right").empty();
@@ -112,7 +92,7 @@ $(function() {
 	$noVege.click(function() {
 		$("#div5").html($cheese);
 		$("#div6").html($noVege2);
-		$("#icon7").html($profile);
+		$("#profile7").html($profile);
 		$("#text7").html($cheese);
 		$("#left").empty();
 		$("#right").empty();
@@ -123,7 +103,7 @@ $(function() {
 	$yesCheese.click(function() {
 		$("#div9").html($time);
 		$("#div8").html($yesCheese2);
-		$("#icon9").html($profile);
+		$("#profile9").html($profile);
 		$("#text9").html($cheese);
 		$("#left").empty();
 		$("#right").empty();
@@ -134,7 +114,7 @@ $(function() {
 	$noCheese.click(function() {
 		$("#div9").html($time);
 		$("#div8").html($noCheese2);
-		$("#icon9").html($profile);
+		$("#profile9").html($profile);
 		$("#text9").html($cheese);
 		$("#left").empty();
 		$("#right").empty();
@@ -145,7 +125,7 @@ $(function() {
 	$moreThirty.click(function() {
 		$("#div11").html($solution);
 		$("#div10").html($moreThirty2);
-		$("#icon11").html($profile);
+		$("#profile11").html($profile);
 		$("#text11").html($cheese);
 		$("#div12").html($zucchini);
 		$("#left").empty();
@@ -157,7 +137,7 @@ $(function() {
 	$lessThirty.click(function() {
 		$("#div11").html($solution);
 		$("#div10").html($lessThirty2);
-		$("#icon11").html($profile);
+		$("#profile11").html($profile);
 		$("#div12").html($zucchini);
 		$("#left").empty();
 		$("#right").empty();
