@@ -73,6 +73,11 @@ body {
 .panel-body {
 	height: 2px;
 }
+.scroll {
+/*	width: 100px;*/
+    height: 500px;
+    overflow: scroll;
+}
 #div12 {
 	text-align: center; 
 }
