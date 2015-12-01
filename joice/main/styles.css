@@ -4,11 +4,11 @@ body {
 	font-size: 18px; 
 }
 .section {
-	width: 30%;
+	width: 100%;
 	margin: .2em auto;
 	padding: .3em 1em;
-/*	border: black solid 2px;*/
-	text-align: center; 
+	border: black solid 2px;
+	text-align: left; 
 	clear: all;
 }
 .button-center {
@@ -17,13 +17,30 @@ body {
 .button-wrap {
 	float: left;
 	width: 50%;
-/*	border: black solid 1px;*/
+	border: black solid 1px;
 	padding: .3em;
 	text-align: center;
 	margin: .3em auto;
 }
-#header {
-	text-align: center; 
+#reply {
+	border: black solid 2px;
+	height: 52px; 
+}
+#left {
+	float: left; 
+	width: 49%;
+	height: 50px;
+	margin: 0 2px 0 0;
+	text-align: right;
+/*	border: black solid 1px;*/
+}
+#right {
+	float: left; 
+	width: 49%;
+	height: 50px;
+	margin: 0 0 0 2px;
+	text-align: left;
+/*	border: black solid 1px;*/
 }
 #logo {
 	width: 30%;
@@ -31,6 +48,18 @@ body {
 /*	border: black solid 2px;*/
 	text-align: center; 
 	clear: all;
+}
+#icon {
+	width: 10%;
+	height: 50px; 
+	border: black solid 1px;
+	float: left; 
+}
+#text {
+	width: 90%;
+	height: 50px;
+	border: black solid 1px;
+	float: left; 
 }
 .clearfix:after {
 	content: ".";

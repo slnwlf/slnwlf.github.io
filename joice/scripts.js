@@ -25,111 +25,114 @@ $(function() {
 
 	var $divClone = $('#quiz-container').clone();
 
-	var greeting = "How are you doing today?";
-	var vegetarian = "Are you a vegetarian?";
-	var cheese = "Do you like cheese?";
-	var time = "How much time do you have to prepare the meal?";
-	var solution = "This recipe looks delicious.  What do you think?";
+	var $profile = $('<img id="joice" src="images/joice-chat.png">');
+	var $greeting = $('<p>How are you doing today??</p>');
+	var $vegetarian = $('<p>Are you a vegetarian?</p>');
+	var $cheese = $('<p>Do you like cheese?</p>');
+	var $time = $('<p>How much time do you have to prepare the meal?</p>');
+	var $solution = $('<p>This recipe looks delicious.  What do you think?</p>');
 
-	var $greatbtn = $('<button type="button" id="great" class="btn btn-default">Great</button>');
-    var $goodbtn = $('<button type="button" id="good" class="btn btn-default">Good</button>');
+	var $greatbtn = $('<button type="button" id="great" class="btn btn-primary">Great</button>');
+	var $goodbtn = $('<button type="button" id="good" class="btn btn-primary">Good</button>');
 
-    var $yesVege = $('<button type="button" id="yes" class="btn btn-default">Yes</button>');
-    var $noVege = $('<button type="button" id="no" class="btn btn-default">No</button>');
+	var $yesVege = $('<button type="button" id="yes" class="btn btn-primary">Yes</button>');
+	var $noVege = $('<button type="button" id="no" class="btn btn-primary">No</button>');
 
-    var $yesCheese = $('<button type="button" id="yesToCheese" class="btn btn-default">Yes to cheese</button>');
-    var $noCheese = $('<button type="button" id="noToCheese" class="btn btn-default">No to cheese</button>');
+	var $yesCheese = $('<button type="button" id="yesToCheese" class="btn btn-primary">Yes to cheese</button>');
+	var $noCheese = $('<button type="button" id="noToCheese" class="btn btn-primary">No to cheese</button>');
 
-    var $lessThirty = $('<button type="button" id="lessThanThirty" class="btn btn-default">Less than 30 min</button>');
-    var $moreThirty = $('<button type="button" id="moreThanThirty" class="btn btn-default">More than 30 min</button>');
-	
- 	var $zucchini = $('<img src="images/zucchini.jpg">');
- 	var $likeButton = $('<button type="button" id="like" class="btn btn-default">Like</button>');
- 	var $likedButton = $('<button type="button" id="like" class="btn btn-primary">Like</button>');
-	
-	var $resetButton = $('<button type="button" id="like" class="btn btn-default">Reset</button>');
+	var $lessThirty = $('<button type="button" id="lessThanThirty" class="btn btn-primary">Less than 30 min</button>');
+	var $moreThirty = $('<button type="button" id="moreThanThirty" class="btn btn-primary">More than 30 min</button>');
+
+	var $zucchini = $('<img src="images/zucchini.jpg">');
+	var $likeButton = $('<button type="button" id="like" class="btn btn-default">Like</button>');
+	var $likedButton = $('<button type="button" id="like" class="btn btn-primary">Like</button>');
+
+	var $resetButton = $('<button type="button" id="like" class="btn btn-primary">Reset</button>');
 	// var currentQuestion = 0;
 	// var selections = [];
 	// var survey = $('#question');
 
 	// displayNext();
 
-// Click handler to start the quiz
+	// Click handler to start the quiz
 
-$("#startquiz").click(function() {
-	$("#div2").text(greeting);
-	$("#great").html($greatbtn);
-	$("#good").html($goodbtn);
-	$("#div1").empty();
+	$("#begin").click(function() {
+		$("#div2").html($greeting);
+		$("#left").html($greatbtn);
+		$("#right").html($goodbtn);
 
-});
-$("#great").click(function() {
-	$("#div4").text(vegetarian);
-	$("#yes").html($yesVege);
-	$("#no").html($noVege);
-	$("#div3").empty();
-	$("#div2").empty();
-});
-$("#good").click(function() {
-	$("#div4").text(vegetarian);
-	$("#yes").html($yesVege);
-	$("#no").html($noVege);
-	$("#div3").empty();
-	$("#div2").empty();
-});
-$("#yes").click(function() {
-	$("#div6").text(cheese);
-	$("#yesToCheese").html($yesCheese);
-	$("#noToCheese").html($noCheese);
-	$("#div4").empty();
-	$("#div5").empty();
-});
-$("#no").click(function() {
-	$("#div6").text(cheese);
-	$("#yesToCheese").html($yesCheese);
-	$("#noToCheese").html($noCheese);
-	$("#div4").empty();
-	$("#div5").empty();
-});
-$("#yesToCheese").click(function() {
-	$("#div8").text(time);
-	$("#lessThanThirty").html($lessThirty);
-	$("#moreThanThirty").html($moreThirty);
-	$("#div6").empty();
-	$("#div7").empty();
-});
-$("#noToCheese").click(function() {
-	$("#div8").text(time);
-	$("#lessThanThirty").html($lessThirty);
-	$("#moreThanThirty").html($moreThirty);
-	$("#div6").empty();
-	$("#div7").empty();
-});
-$("#moreThanThirty").click(function() {
-	$("#div11").text(solution);
-	$("#div10").html($zucchini);
-	$("#like").html($likeButton);
-	$("#reset").html($resetButton);
-	$("#div8").empty();
-	$("#div9").empty();
-});
-$("#lessThanThirty").click(function() {
-	$("#div11").text(solution);
-	$("#div10").html($zucchini);
-	$("#like").html($likeButton);
-	$("#reset").html($resetButton);
-	$("#div8").empty();
-	$("#div9").empty();
-});
-$("#like").click(function() {
-	$("#like").html($likedButton);
-});
-// reset entire document
-$("#reset").click(function() {
-	console.log("the reset button was selected");
-	// $("#quiz-container").replaceWith($divClone.clone());
-	$("#quiz-container").replaceWith($divClone);
-	// Not sure why the rest button doesn't really work
-});
+	});
+	$greatbtn.click(function() {
+		console.log("great was clicked!");
+		$("#div3").html(vegetarian);
+		$("#left").empty();
+		$("#right").empty();
+		$("#left").html($yesVege);
+		$("#right").html($noVege);
+
+	});
+	$goodbtn.click(function() {
+		console.log("good was clicked!");
+		$("#div4").html(vegetarian);
+		$("#left").html($yesVege);
+		$("#right").html($noVege);
+		$("#div3").empty();
+		$("#div2").empty();
+	});
+	$yesVege.click(function() {
+		$("#div6").html(cheese);
+		$("#yesToCheese").html($yesCheese);
+		$("#noToCheese").html($noCheese);
+		$("#div4").empty();
+		$("#div5").empty();
+	});
+	$noVege.click(function() {
+		$("#div6").html(cheese);
+		$("#left").html($yesCheese);
+		$("#right").html($noCheese);
+		$("#div4").empty();
+		$("#div5").empty();
+	});
+	$yesCheese.click(function() {
+		$("#div8").html(time);
+		$("#left").html($lessThirty);
+		$("#right").html($moreThirty);
+		$("#div6").empty();
+		$("#div7").empty();
+	});
+	$noCheese.click(function() {
+		$("#div8").html(time);
+		$("#left").html($lessThirty);
+		$("#right").html($moreThirty);
+		$("#div6").empty();
+		$("#div7").empty();
+	});
+	$moreThirty.click(function() {
+		$("#div11").html(solution);
+		$("#div10").html($zucchini);
+		$("#left").html($likeButton);
+		$("#right").html($resetButton);
+		$("#div8").empty();
+		$("#div9").empty();
+	});
+	$lessThirty.click(function() {
+		$("#div11").html(solution);
+		$("#div10").html($zucchini);
+		$("#left").html($likeButton);
+		$("#right").html($resetButton);
+		$("#div8").empty();
+		$("#div9").empty();
+	});
+	$likeButton.click(function() {
+		$("#like").html($likedButton);
+	});
+	// reset entire document
+	$resetButton.click(function() {
+		console.log("the reset button was selected");
+		// $("#quiz-container").replaceWith($divClone.clone());
+		$("#quiz-container").replaceWith($divClone);
+		// Not sure why the rest button doesn't really work
+	});
 
 });
