@@ -149,9 +149,9 @@ $(function() {
 		$("#right").html($moreButton);
 
 	});
-	$likeButton.click(function() {
-		$("#like").html($likedButton);
-	});
+	// $likeButton.click(function() {
+	// 	$("#like").html($likedButton);
+	// });
 	// more button
 	$moreButton.click(function() {
 		$("#div12").html($fajitas);
