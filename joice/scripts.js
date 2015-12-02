@@ -90,7 +90,7 @@ $(function() {
 
 	});
 	$noVege.click(function() {
-		$("#div5").html($cheese);
+		$("#text5").html($cheese);
 		$("#div6").html($noVege2);
 		$("#profile7").html($profile);
 		$("#text7").html($cheese);

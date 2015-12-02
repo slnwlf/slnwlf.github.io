@@ -37,7 +37,7 @@ body {
 	height: 45px;
 	margin: 3px;
 	text-align: right;
-/*	border: black solid 1px;*/
+	border: black solid 1px;
 }
 #right {
 	float: left; 
@@ -45,7 +45,7 @@ body {
 	height: 45px;
 	margin: 3px;
 	text-align: left;
-/*	border: black solid 1px;*/
+	border: black solid 1px;
 }
 #logo {
 	width: 30%;

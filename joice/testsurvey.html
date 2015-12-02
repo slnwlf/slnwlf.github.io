@@ -22,14 +22,14 @@
                                 <div id="logo" class="pull-left">
                                     <img src="images/joice-logo.jpg">
                                 </div>
-                               <!--  <span class="glyphicon glyphicon-comment"></span> Chat -->
+                                <!--  <span class="glyphicon glyphicon-comment"></span> Chat -->
                                 <div class="btn-group pull-right">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                                     <span class="glyphicon glyphicon-chevron-down"></span>
                                     </button>
                                 </div>
                             </div>
-                          <!--   <div class="panel-body"></div> -->
+                            <!--   <div class="panel-body"></div> -->
                             <!-- Top of Bootstrap UI -->
                             <div id="quiz-container" class="scroll">
                                 <div class="section clearfix" id="div1">
@@ -37,6 +37,7 @@
                                     <div class="text"><p>Hi, I'm Joice! Can I help you find the perfect recipe?</p></div>
                                 </div>
                                 <div class="buttonsection clearfix" id="div2"></div>
+                                
                                 <div class="section clearfix" id="div3">
                                     <div id="profile3"></div>
                                     <div id="text3"></div>
@@ -65,10 +66,12 @@
                             </div>
                             <!-- // bottom of Bootstrap UI //  -->
                             <div id="reply" class="clearfix">
-                                <div id="left">
-                                    <button type="button" id="begin" class="btn btn-primary">Ready!</button>
+                                <div class="clearfix"> <!-- This div is just meant to nest the left and right to children -->
+                                    <div id="left">
+                                        <button type="button" id="begin" class="btn btn-primary">Ready!</button>
+                                    </div>
+                                    <div id="right"></div>
                                 </div>
-                                <div id="right"></div>
                             </div>
                         </div>
                     </div>
