@@ -3,7 +3,8 @@ $(function() {
 
 	// Buttons and text strings
 
-	var $profile = $('<div class="icon"><img src="images/joice-chat.png"></div>');
+	var profile = ('<div class="icon"><img src="images/joice-chat.png"></div>');
+
 	var $greeting = $('<div class="text"><p>Happy to help. How are you doing today?</p></div>');
 	var $vegetarian = $('<div class="text"><p>Are you a vegetarian?</p></div>');
 	var $cheese = $('<div class="text"><p>Do you like cheese?</p></div>');
@@ -53,10 +54,21 @@ $(function() {
 
 	$("#begin").click(function() {
 		$("#div2").html($beginbtn2);
-		$("#profile3").html($profile);
+		$("#profile3").html(profile);
 		$("#text3").html($greeting);
 		$("#left").html($greatbtn);
 		$("#right").html($goodbtn);
+
+	});
+
+	$goodbtn.click(function() {
+		$("#div4").html($goodbtn2);
+		$("#profile5").html(profile);
+		$("#text5").html($vegetarian);
+		$("#left").empty();
+		$("#right").empty();
+		$("#left").html($yesVege);
+		$("#right").html($noVege);
 
 	});
 	$greatbtn.click(function() {
@@ -64,24 +76,15 @@ $(function() {
 		$("#text5").html($vegetarian);
 		$("#left").empty();
 		$("#right").empty();
-		$("#profile5").html($profile);
+		$("#profile5").html(profile);
 		$("#left").html($yesVege);
 		$("#right").html($noVege);
 
 	});
-	$goodbtn.click(function() {
-		$("#div4").html($goodbtn2);
-		$("#profile5").html($profile);
-		$("#text5").html($vegetarian);
-		$("#left").empty();
-		$("#right").empty();
-		$("#left").html($yesVege);
-		$("#right").html($noVege);
 
-	});
 	$yesVege.click(function() {
 		$("#text7").html($cheese);
-		$("#profile7").html($profile);
+		$("#profile7").html(profile);
 		$("#div6").html($yesVege2);
 		$("#left").empty();
 		$("#right").empty();
@@ -92,7 +95,7 @@ $(function() {
 	$noVege.click(function() {
 		$("#text5").html($cheese);
 		$("#div6").html($noVege2);
-		$("#profile7").html($profile);
+		$("#profile7").html(profile);
 		$("#text7").html($cheese);
 		$("#left").empty();
 		$("#right").empty();
@@ -101,10 +104,10 @@ $(function() {
 
 	});
 	$yesCheese.click(function() {
-		$("#div9").html($time);
+		// $("#div9").html($time);
 		$("#div8").html($yesCheese2);
-		$("#profile9").html($profile);
-		$("#text9").html($cheese);
+		$("#profile9").html(profile);
+		$("#text9").html($time);
 		$("#left").empty();
 		$("#right").empty();
 		$("#left").html($lessThirty);
@@ -112,10 +115,10 @@ $(function() {
 
 	});
 	$noCheese.click(function() {
-		$("#div9").html($time);
+		// $("#div9").html($time);
 		$("#div8").html($noCheese2);
-		$("#profile9").html($profile);
-		$("#text9").html($cheese);
+		$("#profile9").html(profile);
+		$("#text9").html($time);
 		$("#left").empty();
 		$("#right").empty();
 		$("#left").html($lessThirty);
@@ -123,10 +126,10 @@ $(function() {
 
 	});
 	$moreThirty.click(function() {
-		$("#div11").html($solution);
+		// $("#div11").html($solution);
 		$("#div10").html($moreThirty2);
-		$("#profile11").html($profile);
-		$("#text11").html($cheese);
+		$("#profile11").html(profile);
+		$("#text11").html($solution);
 		$("#div12").html($zucchini);
 		$("#left").empty();
 		$("#right").empty();
@@ -135,9 +138,10 @@ $(function() {
 
 	});
 	$lessThirty.click(function() {
-		$("#div11").html($solution);
+		// $("#div11").html($solution);
 		$("#div10").html($lessThirty2);
-		$("#profile11").html($profile);
+		$("#profile11").html(profile);
+		$("#text11").html($solution);
 		$("#div12").html($zucchini);
 		$("#left").empty();
 		$("#right").empty();
