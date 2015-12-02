@@ -83,7 +83,7 @@ $(function() {
 	});
 
 	$yesVege.click(function() {
-		$("#text5").html($cheese);
+		$("#text7").html($cheese);
 		$("#profile7").html(profile);
 		$("#div6").html($yesVege2);
 		$("#left").empty();
@@ -93,7 +93,7 @@ $(function() {
 
 	});
 	$noVege.click(function() {
-		$("#text5").html($vegetarian);
+		$("#text7").html($cheese);
 		$("#div6").html($noVege2);
 		$("#profile7").html(profile);
 		$("#text7").html($cheese);
