@@ -13,7 +13,11 @@ var questionSchema = new Schema({
 	options: [{
 		type: Schema.Types.ObjectId,
 		ref: 'Answer'
-	}]
+	}],
+	startQuestion: {
+		type: Boolean,
+		default: false
+	}
 });
 var answerSchema = new Schema({
 	text: String,
@@ -28,7 +32,8 @@ var Answer = mongoose.model('Answer', answerSchema);
 
 // Create questions
 var greeting = new Question({
-	text: "How are you doing today?"
+	text: "How are you doing today?",
+	startQuestion: true
 });
 var ready = new Question({
 	text: "Ready to get started?"
@@ -85,63 +90,38 @@ var moreThirtyAnswer = new Answer({
 time.options = [lessThirtyAnswer, moreThirtyAnswer];
 
 // saving answers to db
-goodAnswer.save(function (err, goodAnswer) {
-	if (err) return console.error(err);
-	console.log(goodAnswer);
-});
-greatAnswer.save(function (err, greatAnswer) {
-	if (err) return console.error(err);
-	console.log(greatAnswer);
-});
-yesVegeAnswer.save(function (err, yesVegeAnswer) {
-	if (err) return console.error(err);
-	console.log(yesVegeAnswer);
-});
-noVegeAnswer.save(function (err, noVegeAnswer) {
-	if (err) return console.error(err);
-	console.log(noVegeAnswer);
-});
-yesCheeseAnswer.save(function (err, yesCheeseAnswer) {
-	if (err) return console.error(err);
-	console.log(yesCheeseAnswer);
-});
-noCheeseAnswer.save(function (err, noCheeseAnswer) {
-	if (err) return console.error(err);
-	console.log(noCheeseAnswer);
-});
-lessThirtyAnswer.save(function (err, lessThirtyAnswer) {
-	if (err) return console.error(err);
-	console.log(lessThirtyAnswer);
-});
-moreThirtyAnswer.save(function (err, moreThirtyAnswer) {
-	if (err) return console.error(err);
-	console.log(moreThirtyAnswer);
-});
+goodAnswer.save();
+greatAnswer.save();
+yesVegeAnswer.save();
+noVegeAnswer.save();
+yesCheeseAnswer.save();
+noCheeseAnswer.save();
+lessThirtyAnswer.save();
+moreThirtyAnswer.save();
 
 // saving questions to db
-greeting.save(function (err, greeting) {
-	if (err) return console.error(err);
+greeting.save();
+ready.save();
+vegetarian.save();
+cheese.save();
+time.save();
 
-	console.log(greeting);
-});
-ready.save(function (err, ready) {
-	if (err) return console.error(err);
+// find the first question
 
-	console.log(ready);
-});
-vegetarian.save(function (err, vegetarian) {
-	if (err) return console.error(err);
+Question.findOne({
+		startQuestion: true
+	})
+	.populate('options')
+	.exec(function(err, first) {
+		if (err) return console.error(err);
 
-	console.log(vegetarian);
-});
-cheese.save(function (err, cheese) {
-	if (err) return console.error(err);
+		var options = first.options;
+		console.log(first.text);
+		for (i = 0; i < options.length; i++) {
+			console.log(options[i].text);
+		}
+	});
 
-	console.log(cheese);
-});
-time.save(function (err, time) {
-	if (err) return console.error(err);
 
-	console.log(time);
-});
-console.log("got to end of script");
+
+console.log("got to end of the script");
