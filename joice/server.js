@@ -1,19 +1,10 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-// var handlebars = require('handlebars');
 
 // setting up a GET route for the directory / root level
 app.get('/', function(req, res) {
 	res.render('index.hbs');
-});
-
-// setting up a GET route for the questions, but questions is not a variable? //
-app.get('/api/questions', function(req, res) {
-	res.json({
-		test: true
-	});
-	// put inside call back function - in the question
 });
 
 app.use(express.static('public'));
@@ -50,7 +41,8 @@ var Question = mongoose.model('Question', questionSchema);
 var Answer = mongoose.model('Answer', answerSchema);
 
 // GET route that gets the first question
-app.get('/api/start', function(req, res) {
+app.get('/api/questions', function(req, res) {
+	// TODO check for parameter start=true
 	Question.findOne({
 			startQuestion: true
 		})
@@ -62,49 +54,33 @@ app.get('/api/start', function(req, res) {
 		});
 	// put inside call back function - in the question
 });
-
 //GET route that gets a question by ID
-app.get('/api/start/:id', function(req, res) {
+app.get('/api/questions/:id', function(req, res) {
 	var currentId = req.params.id;
 	Question.findOne({
-		_id: currentId
-	})
-	.populate('options')
-	.exec(function(err, found) {
-		if (err) return console.error(err);
-		res.json(found);
-	});
+			_id: currentId
+		})
+		.populate('options')
+		.exec(function(err, found) {
+			if (err) return console.error(err);
+			res.json(found);
+		});
 });
 
-// find the first question in Mongo
-Question.findOne({
-		startQuestion: true
-	})
-	.populate('options')
-	.exec(function(err, first) {
-		if (err) return console.error(err);
 
-		var options = first.options;
-		console.log(first.text);
-		for (i = 0; i < options.length; i++) {
-			// find the next question by its ID
-			var nextId = options[i].nextQuestion;
-			Question.findOne({
-					_id: nextId
-				})
-				.populate('options')
-				.exec(function(err, nextQuestion) {
-					console.log(nextQuestion.text);
-				});
-		}
-	});
+
 
 // GET API route for questions with query start = true, /api/questions?start=true 
 
-// GET API route for res.json(first)  and res.json(found)  api/questions/:id
+// GET API route for res.json(first)  - done - tested in postman
 
-// Get it working in postman
-// GET /  res.render html page
+// GET API route and res.json(found)  api/questions/:id - done - tested in postman
+
+// GET /  res.render html page - done - localhost:3000 is working
+
+// How connect these routes to front end?
+
+// Rename API routes so they are more logical /
 
 
 
