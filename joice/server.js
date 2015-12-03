@@ -1,128 +1,165 @@
-console.log("Javascript is loading on the server side");
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+// var handlebars = require('handlebars');
+
+// setting up a GET route for the directory / root level
+app.get('/', function (req, res) {
+	res.render('index.hbs');
+});
+
+// setting up a GET route for the questions
+app.get('/api/questions', function (req, res) {
+	res.json(questions);
+});
+
+app.use(express.static('public'));
+app.set('view engine', 'hbs');
+
+
+// Create a tree that has questions pointing to other questions
+console.log("dbTreeTest script file is running.");
 
 var mongoose = require('mongoose');
+console.log("connecting to Mongo.");
+mongoose.connect('mongodb://localhost/relationTest');
 
-// connect to the mongoose database, `console` collection
-mongoose.connect('mongodb://localhost/console');
+var Schema = mongoose.Schema;
 
-var greeting = new Question({
-	id: _id,
-	text: "How are you doing today?",
-	answers: ["Great", "Good"]
-});
-var ready = new Question({
-	id: _id,
-	text: "Ready to get started?",
-	answers: ["Ready!"]
-});
-var vegetarian = new Question({
-	question: "Are you a vegetarian?",
-	answers: ["Yes. Vegetarian.", "No. I eat meat. "]
-});
-var cheese = new Question({
-	question: "Do you like cheese?",
-	answers: []
-});
-var time = new Question({
-	question: "How much time do you have to cook the meal?",
-	answers: []
-});
-
-// Or maybe set up schemas for both questions and answers?  many:many neede?
-
+// Create question and answer schemas 
 var questionSchema = new Schema({
-	question: String,
-	answers: [{
+	text: String,
+	options: [{
 		type: Schema.Types.ObjectId,
 		ref: 'Answer'
-	}]
+	}],
+	startQuestion: {
+		type: Boolean,
+		default: false
+	}
 });
-
 var answerSchema = new Schema({
-	answer1: String,
-	answer2: String,
-	questions: [{
+	text: String,
+	nextQuestion: {
 		type: Schema.Types.ObjectId,
 		ref: 'Question'
-	}]
+	}
 });
-
-/* Compiling models from the above schemas */
+// Adding models that reference the question and answer schema
 var Question = mongoose.model('Question', questionSchema);
 var Answer = mongoose.model('Answer', answerSchema);
 
-// Creating new questions based on the schema //
-
-var greeting2 = new Question({
-	question: "How are you doing today?",
-	answers: []
+// Create questions
+var greeting = new Question({
+	text: "How are you doing today?",
+	startQuestion: true
 });
-var ready2 = new Question({
-	question: "Sound good?",
-	answers: []
+var vegetarian = new Question({
+	text: "Are you a vegetarian?"
 });
-var vegetarian2 = new Question({
-	question: "Are you a vegetarian?",
-	answers: []
+var cheese = new Question({
+	text: "Do you like cheese?"
 });
-var cheese2 = new Question({
-	question: "Do you like cheese?",
-	answers: []
-});
-var time2 = new Question({
-	question: "How much time do you have to cook the meal?",
-	answers: []
+var time = new Question({
+	text: "How much time do you have to prepare the meal?"
 });
 
-// creating new answers based on its schema // 
-var greeted = new Answer({
-	answer1: "Great",
-	answer2: "Good"
+// Create answers
+var greatAnswer = new Answer({
+	text: "great",
+	nextQuestion: vegetarian
 });
-var readied = new Answer({
-	answer1: "Ready!",
+var goodAnswer = new Answer({
+	text: "good",
+	nextQuestion: vegetarian
 });
-var vegied = new Answer({
-	answer1: "Yep. Vegetarian.",
-	answer2: "No. I eat meat."
-});
-var cheesed = new Answer({
-	answer1: "Yes to cheese",
-	answer2: "No to cheese"
-});
-var timed = new Answer({
-	answer1: "< than 30 minutes",
-	answer2: "> than 30 minutes"
-});
+greeting.options = [greatAnswer, goodAnswer];
 
-// push the answer document into the questions array? //
-
-greeting.save(function(err, taco) {
-	if (err) {
-		return console.error(err);
-	} else console.log(taco);
+var yesVegeAnswer = new Answer({
+	text: "Yes. I'm vegetarian.",
+	nextQuestion: cheese
 });
-greeted.questions.push(greeting);
-greeted.save();
+var noVegeAnswer = new Answer({
+	text: "No. I eat meat",
+	nextQuestion: cheese
+});
+vegetarian.options = [yesVegeAnswer, noVegeAnswer];
 
-/// draft model
+var yesCheeseAnswer = new Answer({
+	text: "Yes to cheese.",
+	nextQuestion: time
+});
+var noCheeseAnswer = new Answer({
+	text: "No to cheese.",
+	nextQuestion: time
+});
+cheese.options = [yesCheeseAnswer, noCheeseAnswer];
 
-var questions = [{
-	question: "How are you doing today?",
-	choices: ["good", "great"]
-}, {
-	question: "I'll ask you a few questions in order to make a recipe recommendation.  Sound good?",
-	choices: ["yep"]
-}, {
-	question: "Are you a vegetarian?",
-	choices: ["yes", "no"]
-}, {
-	question: "Do you like cheese?",
-	choices: ["yes", "no"]
-}, {
-	question: "How much time do you have to prepare the meal?",
-	choices: ["<30 minutes", ">30 minutes"]
-}, {
-	question: "Thanks for all the information.  Are you ready for a recommendation?",
-	choices: ["Yep!"]
-}];
+var lessThirtyAnswer = new Answer({
+	text: "Less than 30 minutes",
+	nextQuestion: null
+});
+var moreThirtyAnswer = new Answer({
+	text: "More than 30 minutes",
+	nextQuestion: null
+});
+time.options = [lessThirtyAnswer, moreThirtyAnswer];
+
+// saving answers to db
+goodAnswer.save();
+greatAnswer.save();
+yesVegeAnswer.save();
+noVegeAnswer.save();
+yesCheeseAnswer.save();
+noCheeseAnswer.save();
+lessThirtyAnswer.save();
+moreThirtyAnswer.save();
+
+// saving questions to db
+greeting.save();
+vegetarian.save();
+cheese.save();
+time.save();
+
+// find the first question in Mongo
+
+Question.findOne({
+		startQuestion: true
+	})
+	.populate('options')
+	.exec(function(err, first) {
+		if (err) return console.error(err);
+
+		var options = first.options;
+		console.log(first.text);
+		for (i = 0; i < options.length; i++) {
+			// find the next question by its ID
+			var nextId = options[i].nextQuestion;
+			Question.findOne({
+				_id: nextId
+			})
+			.populate('options')
+			.exec(function(err, nextQuestion) {
+				console.log(nextQuestion.text);
+			});
+		}
+	});
+
+// GET API route for questions with query start = true, /api/questions?start=true 
+// GET API route for res.json(first)  and res.json(found)  api/questions/:id
+// Node server, express set up, 
+// Get it working in postman
+// GET /  res.render html page
+
+
+
+
+
+// but find next question, based on attribute nextQuestion
+
+console.log("got to end of the script");
+
+// Point to localhost: 3000
+var server = app.listen(process.env.PORT || 3000, function () {
+	console.log("listening!");
+});

@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/relationTest');
 
 var Schema = mongoose.Schema;
 
-// Create question and answer schemas that don't conflict with other scripts
+// Create question and answer schemas 
 var questionSchema = new Schema({
 	text: String,
 	options: [{
@@ -21,12 +21,12 @@ var questionSchema = new Schema({
 });
 var answerSchema = new Schema({
 	text: String,
-	nextQuestion: [{
+	nextQuestion: {
 		type: Schema.Types.ObjectId,
 		ref: 'Question'
-	}]
+	}
 });
-// Adding models that reference the schema
+// Adding models that reference the question and answer schema
 var Question = mongoose.model('Question', questionSchema);
 var Answer = mongoose.model('Answer', answerSchema);
 
@@ -34,9 +34,6 @@ var Answer = mongoose.model('Answer', answerSchema);
 var greeting = new Question({
 	text: "How are you doing today?",
 	startQuestion: true
-});
-var ready = new Question({
-	text: "Ready to get started?"
 });
 var vegetarian = new Question({
 	text: "Are you a vegetarian?"
@@ -51,11 +48,11 @@ var time = new Question({
 // Create answers
 var greatAnswer = new Answer({
 	text: "great",
-	nextQuestion: ready
+	nextQuestion: vegetarian
 });
 var goodAnswer = new Answer({
 	text: "good",
-	nextQuestion: ready
+	nextQuestion: vegetarian
 });
 greeting.options = [greatAnswer, goodAnswer];
 
@@ -67,7 +64,7 @@ var noVegeAnswer = new Answer({
 	text: "No. I eat meat",
 	nextQuestion: cheese
 });
-ready.options = [yesVegeAnswer, noVegeAnswer];
+vegetarian.options = [yesVegeAnswer, noVegeAnswer];
 
 var yesCheeseAnswer = new Answer({
 	text: "Yes to cheese.",
@@ -101,12 +98,11 @@ moreThirtyAnswer.save();
 
 // saving questions to db
 greeting.save();
-ready.save();
 vegetarian.save();
 cheese.save();
 time.save();
 
-// find the first question
+// find the first question in Mongo
 
 Question.findOne({
 		startQuestion: true
@@ -118,10 +114,28 @@ Question.findOne({
 		var options = first.options;
 		console.log(first.text);
 		for (i = 0; i < options.length; i++) {
-			console.log(options[i].text);
+			// find the next question by its ID
+			var nextId = options[i].nextQuestion;
+			Question.findOne({
+				_id: nextId
+			})
+			.populate('options')
+			.exec(function(err, nextQuestion) {
+				console.log(nextQuestion.text);
+			});
 		}
 	});
 
+// GET API route for questions with query start = true, /api/questions?start=true 
+// GET API route for res.json(first)  and res.json(found)  api/questions/:id
+// Node server, express set up, 
+// Get it working in postman
+// GET /  res.render html page
 
+
+
+
+
+// but find next question, based on attribute nextQuestion
 
 console.log("got to end of the script");
