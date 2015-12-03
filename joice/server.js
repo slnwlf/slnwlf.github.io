@@ -4,13 +4,15 @@ var bodyParser = require('body-parser');
 // var handlebars = require('handlebars');
 
 // setting up a GET route for the directory / root level
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
 	res.render('index.hbs');
 });
 
 // setting up a GET route for the questions, but questions is not a variable? //
-app.get('/api/questions', function (req, res) {
-	res.json({ test: true });
+app.get('/api/questions', function(req, res) {
+	res.json({
+		test: true
+	});
 	// put inside call back function - in the question
 });
 
@@ -18,8 +20,6 @@ app.use(express.static('public'));
 app.set('view engine', 'hbs');
 
 // Create a tree that has questions pointing to other questions
-console.log("dbTreeTest script file is running.");
-
 var mongoose = require('mongoose');
 console.log("connecting to Mongo.");
 mongoose.connect('mongodb://localhost/relationTest');
@@ -50,21 +50,33 @@ var Question = mongoose.model('Question', questionSchema);
 var Answer = mongoose.model('Answer', answerSchema);
 
 // GET route that gets the first question
-app.get('/api/start', function (req, res) {
-Question.findOne({
-		startQuestion: true
-	})
-	.populate('options')
-	.exec(function(err, first) {
-		if (err) return console.error(err);
-
-		res.json(first);
-	});
+app.get('/api/start', function(req, res) {
+	Question.findOne({
+			startQuestion: true
+		})
+		.populate('options')
+		.exec(function(err, first) {
+			if (err) return console.error(err);
+			// The GET route responds with the json (object) of the first question
+			res.json(first);
+		});
 	// put inside call back function - in the question
 });
 
-// find the first question in Mongo
+//GET route that gets a question by ID
+app.get('/api/start/:id', function(req, res) {
+	var currentId = req.params.id;
+	Question.findOne({
+		_id: currentId
+	})
+	.populate('options')
+	.exec(function(err, found) {
+		if (err) return console.error(err);
+		res.json(found);
+	});
+});
 
+// find the first question in Mongo
 Question.findOne({
 		startQuestion: true
 	})
@@ -78,16 +90,17 @@ Question.findOne({
 			// find the next question by its ID
 			var nextId = options[i].nextQuestion;
 			Question.findOne({
-				_id: nextId
-			})
-			.populate('options')
-			.exec(function(err, nextQuestion) {
-				console.log(nextQuestion.text);
-			});
+					_id: nextId
+				})
+				.populate('options')
+				.exec(function(err, nextQuestion) {
+					console.log(nextQuestion.text);
+				});
 		}
 	});
 
 // GET API route for questions with query start = true, /api/questions?start=true 
+
 // GET API route for res.json(first)  and res.json(found)  api/questions/:id
 
 // Get it working in postman
@@ -95,11 +108,7 @@ Question.findOne({
 
 
 
-
-
-
-
 // Point to localhost: 3000
-var server = app.listen(process.env.PORT || 3000, function () {
+var server = app.listen(process.env.PORT || 3000, function() {
 	console.log("listening!");
 });
