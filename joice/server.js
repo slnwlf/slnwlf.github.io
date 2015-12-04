@@ -13,7 +13,11 @@ app.set('view engine', 'hbs');
 // Create a tree that has questions pointing to other questions
 var mongoose = require('mongoose');
 console.log("connecting to Mongo.");
-mongoose.connect('mongodb://localhost/relationTest');
+mongoose.connect(
+	process.env.MONGOLAB_URI ||
+	process.env.MONGOHQ_URL ||
+	'mongodb://localhost/relationTest'
+);
 
 var Schema = mongoose.Schema;
 
@@ -66,7 +70,6 @@ app.get('/api/questions/:id', function(req, res) {
 			res.json(found);
 		});
 });
-
 
 
 
